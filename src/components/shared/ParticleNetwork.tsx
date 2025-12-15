@@ -53,7 +53,7 @@ export function ParticleNetwork() {
 
           if (distance < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `hsla(165, 45%, 30%, ${0.15 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `hsla(254, 57%, 39%, ${0.15 * (1 - distance / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -66,7 +66,7 @@ export function ParticleNetwork() {
       particles.forEach((particle) => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'hsla(170, 65%, 40%, 0.6)';
+        ctx.fillStyle = 'hsla(260, 70%, 55%, 0.6)';
         ctx.fill();
       });
     };
