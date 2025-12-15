@@ -1,14 +1,224 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Building2, Battery, Cpu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Layout } from '@/components/layout/Layout';
+import { ParticleNetwork } from '@/components/shared/ParticleNetwork';
+import { SectionHeading } from '@/components/shared/SectionHeading';
 
-const Index = () => {
+const focusAreas = [
+  {
+    icon: Building2,
+    title: 'Industrial Decarbonisation',
+    description: 'Technologies that reduce emissions from steel, cement, chemicals, and other heavy industries.',
+  },
+  {
+    icon: Zap,
+    title: 'Next-Gen Energy Systems',
+    description: 'Infrastructure for renewable generation, grid modernisation, and energy distribution.',
+  },
+  {
+    icon: Battery,
+    title: 'Storage & Electrification',
+    description: 'Advanced batteries, thermal systems, and solutions for electrifying industrial processes.',
+  },
+  {
+    icon: Cpu,
+    title: 'Enabling Technologies',
+    description: 'Digital layers, sensors, and software that power the next generation of climate hardware.',
+  },
+];
+
+const portfolioPreview = [
+  { name: 'Helion Systems', sector: 'Energy Storage', description: 'Grid-scale thermal storage solutions' },
+  { name: 'CarbonForge', sector: 'Industrial', description: 'Low-carbon steel manufacturing' },
+  { name: 'VoltGrid', sector: 'Infrastructure', description: 'Smart grid optimization platform' },
+];
+
+export default function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <ParticleNetwork />
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
 
-export default Index;
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 pt-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="animate-fade-up text-sm font-medium text-accent uppercase tracking-widest mb-6">
+              European Venture Capital
+            </p>
+            <h1 className="animate-fade-up font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground tracking-tight leading-tight">
+              Investing in the infrastructure of a{' '}
+              <span className="text-gradient">net zero world</span>
+            </h1>
+            <p className="animate-fade-up-delayed text-lg md:text-xl text-muted-foreground mt-8 max-w-2xl mx-auto leading-relaxed">
+              We back breakthrough hardware companies that transform industrial systems and unlock the future of clean energy.
+            </p>
+            <div className="animate-fade-up-delayed flex flex-col sm:flex-row items-center justify-center gap-4 mt-10" style={{ animationDelay: '0.4s' }}>
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/thesis">
+                  Explore our thesis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/portfolio">View portfolio</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <div className="w-px h-12 bg-gradient-to-b from-transparent via-muted-foreground/30 to-muted-foreground/60" />
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-24 lg:py-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <SectionHeading
+                eyebrow="About Virida"
+                title="Catalysing the energy transition through deep tech investment"
+              />
+              <p className="mt-6 text-muted-foreground leading-relaxed">
+                Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
+                accelerating the energy transition. We partner with exceptional founders building the physical 
+                infrastructure required for a decarbonised world.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Our team combines deep expertise in energy systems, industrial technology, and venture capital 
+                to support founders from first prototype to commercial scale.
+              </p>
+              <Button variant="minimal" className="mt-8" asChild>
+                <Link to="/team">
+                  Meet our team
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-card to-secondary border border-border p-8 flex items-center justify-center">
+                <div className="grid grid-cols-2 gap-4 w-full">
+                  {[
+                    { value: '€150M', label: 'Fund Size' },
+                    { value: '12+', label: 'Portfolio Companies' },
+                    { value: '5', label: 'European Markets' },
+                    { value: '2019', label: 'Founded' },
+                  ].map((stat, index) => (
+                    <div key={index} className="text-center p-6 rounded-xl bg-background/50 backdrop-blur">
+                      <p className="font-display text-3xl font-semibold text-foreground">{stat.value}</p>
+                      <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Focus Areas Section */}
+      <section className="py-24 lg:py-32 bg-card">
+        <div className="container mx-auto px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Investment Focus"
+            title="Where we invest"
+            description="We focus on four interconnected domains where breakthrough hardware innovation can drive systemic change in energy and industrial systems."
+            centered
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            {focusAreas.map((area, index) => (
+              <div
+                key={index}
+                className="group p-8 rounded-2xl bg-background border border-border hover-lift cursor-pointer"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <area.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-foreground mb-3">{area.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/thesis">
+                Read our full thesis
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Preview Section */}
+      <section className="py-24 lg:py-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <SectionHeading
+              eyebrow="Portfolio"
+              title="Companies we back"
+              description="A selection of founders building the future of energy."
+            />
+            <Button variant="outline" asChild>
+              <Link to="/portfolio">
+                View all
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {portfolioPreview.map((company, index) => (
+              <div
+                key={index}
+                className="group p-8 rounded-2xl border border-border bg-card hover-lift cursor-pointer"
+              >
+                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6">
+                  <span className="font-display text-xl font-semibold text-foreground">
+                    {company.name.charAt(0)}
+                  </span>
+                </div>
+                <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
+                  {company.sector}
+                </span>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-2">{company.name}</h3>
+                <p className="text-sm text-muted-foreground">{company.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 lg:py-32 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight max-w-2xl mx-auto">
+            Building breakthrough climate hardware?
+          </h2>
+          <p className="mt-6 text-primary-foreground/80 text-lg max-w-xl mx-auto">
+            We're always looking to meet exceptional founders tackling the hardest problems in energy and industrial systems.
+          </p>
+          <Button
+            variant="outline"
+            size="xl"
+            className="mt-10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+            asChild
+          >
+            <Link to="/contact">
+              Get in touch
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+    </Layout>
+  );
+}
