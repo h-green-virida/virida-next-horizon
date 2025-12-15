@@ -17,87 +17,87 @@
     --popover: 45 20% 98%;
     --popover-foreground: 200 15% 15%;
 
-    /* Deep forest green - primary */
-    --primary: 165 45% 18%;
-    --primary-foreground: 45 20% 98%;
+    /* Virida brand purple - primary */
+    --primary: 254 57% 39%;
+    --primary-foreground: 0 0% 100%;
 
     /* Warm grey - secondary */
-    --secondary: 200 8% 92%;
-    --secondary-foreground: 200 15% 25%;
+    --secondary: 250 15% 95%;
+    --secondary-foreground: 254 40% 25%;
 
     /* Muted tones */
-    --muted: 45 10% 92%;
-    --muted-foreground: 200 10% 45%;
+    --muted: 250 10% 92%;
+    --muted-foreground: 250 10% 45%;
 
-    /* Electric teal accent */
-    --accent: 170 65% 40%;
-    --accent-foreground: 45 20% 98%;
+    /* Lighter purple accent */
+    --accent: 260 70% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 10% 88%;
-    --input: 200 10% 88%;
-    --ring: 165 45% 18%;
+    --border: 250 15% 88%;
+    --input: 250 15% 88%;
+    --ring: 254 57% 39%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --graphite: 210 12% 22%;
-    --electric: 175 75% 45%;
+    --graphite: 254 20% 20%;
+    --electric: 260 70% 60%;
     --cream: 45 30% 96%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(165 45% 18% / 0.03) 0%, hsl(175 75% 45% / 0.05) 50%, hsl(45 30% 96% / 0.1) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(254 57% 39% / 0.03) 0%, hsl(260 70% 55% / 0.05) 50%, hsl(45 30% 96% / 0.1) 100%);
     --gradient-card: linear-gradient(180deg, hsl(45 20% 98%) 0%, hsl(45 15% 96%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(165 45% 18%) 0%, hsl(175 65% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(254 57% 39%) 0%, hsl(270 60% 50%) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 4px 24px -4px hsl(200 15% 15% / 0.06);
-    --shadow-card: 0 8px 32px -8px hsl(200 15% 15% / 0.08);
-    --shadow-elevated: 0 16px 48px -12px hsl(200 15% 15% / 0.12);
+    --shadow-soft: 0 4px 24px -4px hsl(254 30% 20% / 0.08);
+    --shadow-card: 0 8px 32px -8px hsl(254 30% 20% / 0.12);
+    --shadow-elevated: 0 16px 48px -12px hsl(254 30% 20% / 0.18);
 
     /* Sidebar */
-    --sidebar-background: 45 20% 98%;
-    --sidebar-foreground: 200 15% 15%;
-    --sidebar-primary: 165 45% 18%;
-    --sidebar-primary-foreground: 45 20% 98%;
-    --sidebar-accent: 170 65% 40%;
-    --sidebar-accent-foreground: 45 20% 98%;
-    --sidebar-border: 200 10% 88%;
-    --sidebar-ring: 165 45% 18%;
+    --sidebar-background: 250 15% 98%;
+    --sidebar-foreground: 254 30% 15%;
+    --sidebar-primary: 254 57% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 70% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 250 15% 88%;
+    --sidebar-ring: 254 57% 39%;
   }
 
   .dark {
-    --background: 210 15% 8%;
-    --foreground: 45 15% 95%;
+    --background: 254 30% 6%;
+    --foreground: 250 15% 95%;
 
-    --card: 210 12% 12%;
-    --card-foreground: 45 15% 95%;
+    --card: 254 25% 10%;
+    --card-foreground: 250 15% 95%;
 
-    --popover: 210 15% 8%;
-    --popover-foreground: 45 15% 95%;
+    --popover: 254 30% 6%;
+    --popover-foreground: 250 15% 95%;
 
-    --primary: 170 55% 50%;
-    --primary-foreground: 210 15% 8%;
+    --primary: 260 70% 65%;
+    --primary-foreground: 254 40% 10%;
 
-    --secondary: 210 10% 18%;
-    --secondary-foreground: 45 15% 90%;
+    --secondary: 254 20% 18%;
+    --secondary-foreground: 250 15% 90%;
 
-    --muted: 210 10% 20%;
-    --muted-foreground: 200 10% 60%;
+    --muted: 254 15% 20%;
+    --muted-foreground: 250 10% 60%;
 
-    --accent: 175 75% 45%;
-    --accent-foreground: 210 15% 8%;
+    --accent: 270 70% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 10% 20%;
-    --input: 210 10% 20%;
-    --ring: 170 55% 50%;
+    --border: 254 15% 22%;
+    --input: 254 15% 22%;
+    --ring: 260 70% 65%;
 
-    --graphite: 210 10% 75%;
+    --graphite: 254 10% 75%;
     --electric: 175 75% 50%;
     --cream: 45 10% 15%;
 
