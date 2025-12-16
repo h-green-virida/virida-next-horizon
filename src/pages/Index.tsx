@@ -91,7 +91,7 @@ export default function Index() {
             <div>
               <SectionHeading
                 eyebrow="About Virida"
-                title="Catalysing the energy transition through deep tech investment"
+                title="Catalysing the energy transition through hardware energy tech investment"
               />
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
