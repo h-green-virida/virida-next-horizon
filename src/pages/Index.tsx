@@ -82,14 +82,14 @@ export default function Index() {
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pt-20">
           <div className="max-w-4xl mx-auto text-center">
             <p className="animate-fade-up text-sm font-medium text-accent uppercase tracking-widest mb-6">
-              European Venture Capital
+              The Future of Physical
             </p>
             <h1 className="animate-fade-up font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground tracking-tight leading-tight">
               Investing in the new infrastructure of a{' '}
               <span className="text-gradient">net zero world</span>
             </h1>
             <p className="animate-fade-up-delayed text-lg md:text-xl text-muted-foreground mt-8 max-w-2xl mx-auto leading-relaxed">
-              We back breakthrough hardware companies that transform industrial systems and unlock the future of clean energy.
+              We back breakthrough hardware companies that transform economic systems and unlock the future of clean energy.
             </p>
             <div className="animate-fade-up-delayed flex flex-col sm:flex-row items-center justify-center gap-4 mt-10" style={{ animationDelay: '0.4s' }}>
               <Button variant="hero" size="xl" asChild>
