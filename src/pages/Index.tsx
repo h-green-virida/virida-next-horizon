@@ -9,27 +9,27 @@ const focusAreas = [
   {
     icon: Zap,
     title: 'Electrons',
-    description: 'Technologies that generate, transmit, store, and intelligently manage electricity across the energy system.',
+    description: 'Technologies that create and intelligently manage clean electricity across the energy system.',
   },
   {
     icon: Atom,
     title: 'Molecules',
-    description: 'Solutions enabling the production, conversion, and use of low carbon fuels, chemicals, and industrial feedstocks.',
+    description: 'Solutions enabling the production, conversion, and use of physical energy carriers.',
   },
   {
     icon: Battery,
     title: 'Storage',
-    description: 'Technologies that store energy or materials to balance supply and demand across time, scale, and applications.',
+    description: 'Technologies that store energy to balance supply and demand across time, scale, and application.',
   },
   {
     icon: Car,
     title: 'Mobility',
-    description: 'Systems and platforms that decarbonize the movement of people and goods across road, sea, and air.',
+    description: 'Systems and platforms that decarbonise the movement of people and goods across land, sea, and air.',
   },
   {
     icon: Settings,
     title: 'Foundations & Efficiencies',
-    description: 'Core technologies that improve manufacturing, asset optimisation, and energy efficiency across the industrial value chain.',
+    description: 'Core technologies that improve industry, manufacturing, and infrastructure efficiency.',
   },
 ];
 
@@ -85,7 +85,7 @@ export default function Index() {
               European Venture Capital
             </p>
             <h1 className="animate-fade-up font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground tracking-tight leading-tight">
-              Investing in the infrastructure of a{' '}
+              Investing in the new infrastructure of a{' '}
               <span className="text-gradient">net zero world</span>
             </h1>
             <p className="animate-fade-up-delayed text-lg md:text-xl text-muted-foreground mt-8 max-w-2xl mx-auto leading-relaxed">
