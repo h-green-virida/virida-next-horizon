@@ -50,10 +50,10 @@ export default function Team() {
           <div className="max-w-3xl">
             <p className="text-sm font-medium text-accent uppercase tracking-widest mb-4">Our Team</p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">
-              Operators and investors building the energy future
+              Operators and investors building the future of energy
             </h1>
             <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
-              Our team combines deep technical expertise in energy systems with decades of experience 
+              Our team combines deep expertise in energy systems with decades of experience 
               building and scaling industrial technology companies.
             </p>
           </div>
