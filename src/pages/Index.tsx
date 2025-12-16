@@ -113,7 +113,7 @@ export default function Index() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-card to-secondary border border-border p-8 flex items-center justify-center">
                 <div className="grid grid-cols-2 gap-4 w-full">
                   {[
-                    { value: 'Energy Hardware', label: 'Sector' },
+                    { value: 'Energy', label: 'Sector' },
                     { value: 'Europe', label: 'Geography' },
                     { value: 'Seed to Series A', label: 'Stage' },
                     { value: '€1-8M', label: 'Ticket Size' },
