@@ -113,10 +113,10 @@ export default function Index() {
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-card to-secondary border border-border p-8 flex items-center justify-center">
                 <div className="grid grid-cols-2 gap-4 w-full">
                   {[
-                    { value: '€150M', label: 'Fund Size' },
-                    { value: '12+', label: 'Portfolio Companies' },
-                    { value: '5', label: 'European Markets' },
-                    { value: '2019', label: 'Founded' },
+                    { value: 'Energy Hardware', label: 'Sector' },
+                    { value: 'Europe', label: 'Geography' },
+                    { value: 'Seed to Series A', label: 'Stage' },
+                    { value: '€1-8M', label: 'Ticket Size' },
                   ].map((stat, index) => (
                     <div key={index} className="text-center p-6 rounded-xl bg-background/50 backdrop-blur">
                       <p className="font-display text-3xl font-semibold text-foreground">{stat.value}</p>
