@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Building2, Battery, Cpu } from 'lucide-react';
+import { ArrowRight, Zap, Atom, Battery, Car, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { ParticleNetwork } from '@/components/shared/ParticleNetwork';
@@ -7,24 +7,29 @@ import { SectionHeading } from '@/components/shared/SectionHeading';
 
 const focusAreas = [
   {
-    icon: Building2,
-    title: 'Industrial Decarbonisation',
-    description: 'Technologies that reduce emissions from steel, cement, chemicals, and other heavy industries.',
+    icon: Zap,
+    title: 'Electrons',
+    description: 'Technologies that generate, transmit, store, and intelligently manage electricity across the energy system.',
   },
   {
-    icon: Zap,
-    title: 'Next-Gen Energy Systems',
-    description: 'Infrastructure for renewable generation, grid modernisation, and energy distribution.',
+    icon: Atom,
+    title: 'Molecules',
+    description: 'Solutions enabling the production, conversion, and use of low carbon fuels, chemicals, and industrial feedstocks.',
   },
   {
     icon: Battery,
-    title: 'Storage & Electrification',
-    description: 'Advanced batteries, thermal systems, and solutions for electrifying industrial processes.',
+    title: 'Storage',
+    description: 'Technologies that store energy or materials to balance supply and demand across time, scale, and applications.',
   },
   {
-    icon: Cpu,
-    title: 'Enabling Technologies',
-    description: 'Digital layers, sensors, and software that power the next generation of climate hardware.',
+    icon: Car,
+    title: 'Mobility',
+    description: 'Systems and platforms that decarbonize the movement of people and goods across road, sea, and air.',
+  },
+  {
+    icon: Settings,
+    title: 'Foundations & Efficiencies',
+    description: 'Core technologies that improve manufacturing, asset optimisation, and energy efficiency across the industrial value chain.',
   },
 ];
 
@@ -131,10 +136,10 @@ export default function Index() {
           <SectionHeading
             eyebrow="Investment Focus"
             title="Where we invest"
-            description="We focus on four interconnected domains where breakthrough hardware innovation can drive systemic change in energy and industrial systems."
+            description="We focus on five interconnected domains where breakthrough hardware innovation can drive systemic change in energy and industrial systems."
             centered
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-16">
             {focusAreas.map((area, index) => (
               <div
                 key={index}

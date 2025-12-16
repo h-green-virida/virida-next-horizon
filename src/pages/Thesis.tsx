@@ -1,31 +1,37 @@
 import { Layout } from '@/components/layout/Layout';
 import { SectionHeading } from '@/components/shared/SectionHeading';
-import { Building2, Zap, Flame, Layers } from 'lucide-react';
+import { Zap, Atom, Battery, Car, Settings } from 'lucide-react';
 
 const pillars = [
   {
-    icon: Building2,
-    title: 'Decarbonising Heavy Industry',
-    description: 'Heavy industry accounts for nearly 30% of global emissions, yet remains underserved by traditional venture capital. We invest in technologies that fundamentally reimagine how steel, cement, chemicals, and other foundational materials are produced.',
-    examples: ['Green steel production', 'Low-carbon cement alternatives', 'Industrial process electrification', 'Carbon capture for industrial sources'],
-  },
-  {
     icon: Zap,
-    title: 'Next-Generation Energy Systems',
-    description: 'The energy grid of tomorrow will look radically different. We back founders building the infrastructure for renewable generation at scale, grid modernisation, and the complex systems required to balance intermittent supply with dynamic demand.',
-    examples: ['Advanced grid infrastructure', 'Renewable generation technologies', 'Power electronics and conversion', 'Grid balancing systems'],
+    title: 'Electrons',
+    description: 'Technologies that generate, transmit, store, and intelligently manage electricity across the energy system. From advanced solar and wind to next-generation grid infrastructure, we back founders building the backbone of electrified economies.',
+    examples: ['Advanced renewable generation', 'Grid modernisation and power electronics', 'Transmission and distribution infrastructure', 'Intelligent energy management systems'],
   },
   {
-    icon: Flame,
-    title: 'Electrification & Thermal Technologies',
-    description: 'The electrification of heat and industrial processes represents one of the largest opportunities in the energy transition. We invest in advanced battery technologies, thermal storage systems, and heat pumps for industrial applications.',
-    examples: ['Next-gen battery chemistries', 'Long-duration energy storage', 'Industrial heat pumps', 'Thermal energy storage'],
+    icon: Atom,
+    title: 'Molecules',
+    description: 'Solutions enabling the production, conversion, and use of low carbon fuels, chemicals, and industrial feedstocks. The molecular economy must be reinvented to meet net zero targets across heavy industry and hard-to-abate sectors.',
+    examples: ['Green hydrogen production', 'Low-carbon ammonia and methanol', 'Sustainable aviation fuels', 'Bio-based chemicals and feedstocks'],
   },
   {
-    icon: Layers,
-    title: 'Enabling Digital Layers',
-    description: 'Software and sensors are the nervous system of the new energy economy. We invest in the digital infrastructure that enables hardware to operate efficiently, integrate seamlessly, and scale intelligently.',
-    examples: ['Energy management systems', 'Predictive maintenance platforms', 'Industrial IoT infrastructure', 'Grid optimisation software'],
+    icon: Battery,
+    title: 'Storage',
+    description: 'Technologies that store energy or materials to balance supply and demand across time, scale, and applications. Storage is the linchpin of the energy transition, enabling flexibility across hours, days, and seasons.',
+    examples: ['Next-gen battery chemistries', 'Long-duration energy storage', 'Thermal storage systems', 'Hydrogen and compressed air storage'],
+  },
+  {
+    icon: Car,
+    title: 'Mobility',
+    description: 'Systems and platforms that decarbonize the movement of people and goods across road, sea, and air. Transport accounts for a quarter of global emissions and requires fundamental hardware innovation.',
+    examples: ['Electric vehicle components', 'Maritime decarbonisation', 'Aviation electrification', 'Charging infrastructure'],
+  },
+  {
+    icon: Settings,
+    title: 'Foundations & Efficiencies',
+    description: 'Core technologies that improve manufacturing, asset optimisation, and energy efficiency across the industrial value chain. Efficiency remains the cheapest form of clean energy.',
+    examples: ['Industrial process optimisation', 'Smart sensors and IoT', 'Predictive maintenance platforms', 'Energy-efficient manufacturing'],
   },
 ];
 
@@ -98,7 +104,7 @@ export default function Thesis() {
           <SectionHeading
             eyebrow="Investment Pillars"
             title="Where we focus"
-            description="Our thesis is built around four interconnected domains where breakthrough hardware innovation can drive systemic change."
+            description="Our thesis is built around five interconnected domains where breakthrough hardware innovation can drive systemic change."
             centered
           />
           <div className="mt-20 space-y-8">
