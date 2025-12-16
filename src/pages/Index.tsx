@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Atom, Battery, Car, Settings } from 'lucide-react';
+import { ArrowRight, Zap, Atom, Battery, Car, Settings, Calendar, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { ParticleNetwork } from '@/components/shared/ParticleNetwork';
@@ -37,6 +37,33 @@ const portfolioPreview = [
   { name: 'Helion Systems', sector: 'Energy Storage', description: 'Grid-scale thermal storage solutions' },
   { name: 'CarbonForge', sector: 'Industrial', description: 'Low-carbon steel manufacturing' },
   { name: 'VoltGrid', sector: 'Infrastructure', description: 'Smart grid optimization platform' },
+];
+
+const blogPreview = [
+  {
+    id: 1,
+    title: 'The Rise of Long-Duration Energy Storage',
+    excerpt: 'As renewable energy penetration increases, the need for storage solutions that can balance supply and demand becomes critical.',
+    category: 'Storage',
+    date: '2024-12-10',
+    readTime: '6 min read',
+  },
+  {
+    id: 2,
+    title: 'Green Hydrogen: From Hype to Reality',
+    excerpt: 'We examine the economics of green hydrogen production and identify where it will first achieve cost competitiveness.',
+    category: 'Molecules',
+    date: '2024-11-28',
+    readTime: '8 min read',
+  },
+  {
+    id: 3,
+    title: 'Decarbonising Heavy Industry',
+    excerpt: 'Steel, cement, and chemicals account for nearly 30% of global emissions. We explore breakthrough technologies.',
+    category: 'Foundations',
+    date: '2024-11-15',
+    readTime: '7 min read',
+  },
 ];
 
 export default function Index() {
@@ -197,6 +224,68 @@ export default function Index() {
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">{company.name}</h3>
                 <p className="text-sm text-muted-foreground">{company.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Preview Section */}
+      <section className="py-24 lg:py-32 bg-card">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <SectionHeading
+              eyebrow="Insights"
+              title="Latest from our blog"
+              description="Perspectives on climate hardware innovation and the energy transition."
+            />
+            <Button variant="outline" asChild>
+              <Link to="/blog">
+                View all posts
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {blogPreview.map((post) => (
+              <article
+                key={post.id}
+                className="group flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover-lift cursor-pointer"
+              >
+                <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="font-display text-xl font-semibold text-primary">
+                        {post.category.charAt(0)}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col flex-1 p-6">
+                  <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3 w-fit">
+                    {post.category}
+                  </span>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center gap-4 mt-4 pt-4 border-t border-border text-xs text-muted-foreground">
+                    <span className="flex items-center gap-1.5">
+                      <Calendar className="h-3.5 w-3.5" />
+                      {new Date(post.date).toLocaleDateString('en-GB', { 
+                        day: 'numeric', 
+                        month: 'short', 
+                        year: 'numeric' 
+                      })}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <Clock className="h-3.5 w-3.5" />
+                      {post.readTime}
+                    </span>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
