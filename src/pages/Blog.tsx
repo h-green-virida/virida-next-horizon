@@ -1,64 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Clock } from 'lucide-react';
+import { Calendar, Clock } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { SectionHeading } from '@/components/shared/SectionHeading';
-
-const blogPosts = [
-  {
-    id: 1,
-    title: 'The Rise of Long-Duration Energy Storage',
-    excerpt: 'As renewable energy penetration increases, the need for storage solutions that can balance supply and demand over hours, days, and even seasons becomes critical.',
-    category: 'Storage',
-    date: '2024-12-10',
-    readTime: '6 min read',
-    image: null,
-  },
-  {
-    id: 2,
-    title: 'Green Hydrogen: From Hype to Reality',
-    excerpt: 'We examine the economics of green hydrogen production and identify the sectors where it will first achieve cost competitiveness with fossil alternatives.',
-    category: 'Molecules',
-    date: '2024-11-28',
-    readTime: '8 min read',
-    image: null,
-  },
-  {
-    id: 3,
-    title: 'Decarbonising Heavy Industry: The Hardware Challenge',
-    excerpt: 'Steel, cement, and chemicals account for nearly 30% of global emissions. We explore the breakthrough technologies that could transform these sectors.',
-    category: 'Foundations',
-    date: '2024-11-15',
-    readTime: '7 min read',
-    image: null,
-  },
-  {
-    id: 4,
-    title: 'The Grid of Tomorrow: Rebuilding Energy Infrastructure',
-    excerpt: 'The electricity grid was designed for centralised fossil fuel generation. The transition to distributed renewables demands fundamental reinvention.',
-    category: 'Electrons',
-    date: '2024-10-30',
-    readTime: '5 min read',
-    image: null,
-  },
-  {
-    id: 5,
-    title: 'Electric Aviation: When Will Planes Go Green?',
-    excerpt: 'Aviation is one of the hardest sectors to decarbonise. We analyse the pathways to zero-emission flight and the timeline for commercial viability.',
-    category: 'Mobility',
-    date: '2024-10-18',
-    readTime: '9 min read',
-    image: null,
-  },
-  {
-    id: 6,
-    title: 'Why Europe Leads in Climate Hardware',
-    excerpt: 'Europe has emerged as the global epicentre for climate hardware innovation. We examine the factors driving this leadership and what it means for founders.',
-    category: 'Insights',
-    date: '2024-10-05',
-    readTime: '6 min read',
-    image: null,
-  },
-];
+import { blogPosts } from '@/data/blogPosts';
 
 export default function Blog() {
   return (
@@ -83,9 +27,10 @@ export default function Blog() {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article
+              <Link
                 key={post.id}
-                className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover-lift cursor-pointer"
+                to={`/blog/${post.slug}`}
+                className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover-lift"
               >
                 {/* Image Placeholder */}
                 <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
@@ -129,7 +74,7 @@ export default function Blog() {
                     </span>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

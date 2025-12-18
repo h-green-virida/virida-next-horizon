@@ -39,32 +39,9 @@ const portfolioPreview = [
   { name: 'Marcley', logo: 'MC', sector: 'Infrastructure', description: 'Giving multi-tenant buildings access to cheap, clean energy.' },
 ];
 
-const blogPreview = [
-  {
-    id: 1,
-    title: 'The Rise of Long-Duration Energy Storage',
-    excerpt: 'As renewable energy penetration increases, the need for storage solutions that can balance supply and demand becomes critical.',
-    category: 'Storage',
-    date: '2024-12-10',
-    readTime: '6 min read',
-  },
-  {
-    id: 2,
-    title: 'Green Hydrogen: From Hype to Reality',
-    excerpt: 'We examine the economics of green hydrogen production and identify where it will first achieve cost competitiveness.',
-    category: 'Molecules',
-    date: '2024-11-28',
-    readTime: '8 min read',
-  },
-  {
-    id: 3,
-    title: 'Decarbonising Heavy Industry',
-    excerpt: 'Steel, cement, and chemicals account for nearly 30% of global emissions. We explore breakthrough technologies.',
-    category: 'Foundations',
-    date: '2024-11-15',
-    readTime: '7 min read',
-  },
-];
+import { blogPosts } from '@/data/blogPosts';
+
+const blogPreview = blogPosts.slice(0, 3);
 
 export default function Index() {
   return (
@@ -247,9 +224,10 @@ export default function Index() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {blogPreview.map((post) => (
-              <article
+              <Link
                 key={post.id}
-                className="group flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover-lift cursor-pointer"
+                to={`/blog/${post.slug}`}
+                className="group flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover-lift"
               >
                 <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -285,7 +263,7 @@ export default function Index() {
                     </span>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
