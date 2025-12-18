@@ -34,9 +34,9 @@ const focusAreas = [
 ];
 
 const portfolioPreview = [
-  { name: 'Helion Systems', sector: 'Energy Storage', description: 'Grid-scale thermal storage solutions' },
-  { name: 'CarbonForge', sector: 'Industrial', description: 'Low-carbon steel manufacturing' },
-  { name: 'VoltGrid', sector: 'Infrastructure', description: 'Smart grid optimization platform' },
+  { name: 'Undisclosed', logo: 'UD', sector: 'Energy Generation', description: 'Undisclosed' },
+  { name: 'Undisclosed', logo: 'UD', sector: 'Industrial Heat', description: 'Undisclosed' },
+  { name: 'Marcley', logo: 'MC', sector: 'Infrastructure', description: 'Giving multi-tenant buildings access to cheap, clean energy.' },
 ];
 
 const blogPreview = [
@@ -215,7 +215,7 @@ export default function Index() {
               >
                 <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6">
                   <span className="font-display text-xl font-semibold text-foreground">
-                    {company.name.charAt(0)}
+                    {company.logo}
                   </span>
                 </div>
                 <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
