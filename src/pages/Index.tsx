@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Atom, Battery, Car, Settings, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, Zap, Atom, Battery, Car, Settings, Calendar, Clock, X, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { ParticleNetwork } from '@/components/shared/ParticleNetwork';
@@ -34,9 +35,36 @@ const focusAreas = [
 ];
 
 const portfolioPreview = [
-  { name: 'Undisclosed', logo: 'UD', sector: 'Energy Generation', description: 'Undisclosed' },
-  { name: 'Undisclosed', logo: 'UD', sector: 'Industrial Heat', description: 'Undisclosed' },
-  { name: 'Marcley', logo: 'MC', sector: 'Infrastructure', description: 'Giving multi-tenant buildings access to cheap, clean energy.' },
+  { 
+    name: 'Undisclosed', 
+    logo: 'UD', 
+    sector: 'Energy Generation', 
+    description: 'Undisclosed',
+    longDescription: 'Undisclosed',
+    founded: '2025',
+    location: 'United Kingdom',
+    website: '#',
+  },
+  { 
+    name: 'Undisclosed', 
+    logo: 'UD', 
+    sector: 'Industrial Heat', 
+    description: 'Undisclosed',
+    longDescription: 'Undisclosed',
+    founded: '2024',
+    location: 'Netherlands',
+    website: '#',
+  },
+  { 
+    name: 'Marcley', 
+    logo: 'MC', 
+    sector: 'Infrastructure', 
+    description: 'Giving multi-tenant buildings access to cheap, clean energy.',
+    longDescription: 'Marcley provides a hardware and software solution that enables multi-tenant buildings to deploy self-generated solar energy for tenants, seamlessly managing the grid, on-site generation, and other connected assets - whilst saving costs and reducing emissions.',
+    founded: '2022',
+    location: 'Hanover, Germany',
+    website: 'https://www.marcley.com',
+  },
 ];
 
 import { blogPosts } from '@/data/blogPosts';
@@ -44,6 +72,8 @@ import { blogPosts } from '@/data/blogPosts';
 const blogPreview = blogPosts.slice(0, 3);
 
 export default function Index() {
+  const [selectedCompany, setSelectedCompany] = useState<typeof portfolioPreview[0] | null>(null);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -186,12 +216,13 @@ export default function Index() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {portfolioPreview.map((company, index) => (
-              <div
+              <button
                 key={index}
-                className="group p-8 rounded-2xl border border-border bg-card hover-lift cursor-pointer"
+                onClick={() => setSelectedCompany(company)}
+                className="group p-8 rounded-2xl border border-border bg-card text-left hover-lift transition-all"
               >
-                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6">
-                  <span className="font-display text-xl font-semibold text-foreground">
+                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                  <span className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                     {company.logo}
                   </span>
                 </div>
@@ -200,7 +231,7 @@ export default function Index() {
                 </span>
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">{company.name}</h3>
                 <p className="text-sm text-muted-foreground">{company.description}</p>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -291,6 +322,58 @@ export default function Index() {
           </Button>
         </div>
       </section>
+
+      {/* Company Detail Modal */}
+      {selectedCompany && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div 
+            className="absolute inset-0 bg-foreground/20 backdrop-blur-sm"
+            onClick={() => setSelectedCompany(null)}
+          />
+          <div className="relative w-full max-w-2xl bg-background rounded-2xl border border-border shadow-elevated p-8 max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={() => setSelectedCompany(null)}
+              className="absolute top-4 right-4 p-2 rounded-lg hover:bg-secondary transition-colors"
+            >
+              <X className="h-5 w-5 text-muted-foreground" />
+            </button>
+            
+            <div className="flex items-start gap-6 mb-6">
+              <div className="w-20 h-20 rounded-xl bg-secondary flex items-center justify-center">
+                <span className="font-display text-2xl font-semibold text-foreground">
+                  {selectedCompany.logo}
+                </span>
+              </div>
+              <div>
+                <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-2">
+                  {selectedCompany.sector}
+                </span>
+                <h2 className="font-display text-2xl font-semibold text-foreground">{selectedCompany.name}</h2>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed mb-8">{selectedCompany.longDescription}</p>
+
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="p-4 rounded-xl bg-card border border-border">
+                <p className="text-sm text-muted-foreground">Founded</p>
+                <p className="font-display font-semibold text-foreground">{selectedCompany.founded}</p>
+              </div>
+              <div className="p-4 rounded-xl bg-card border border-border">
+                <p className="text-sm text-muted-foreground">Location</p>
+                <p className="font-display font-semibold text-foreground">{selectedCompany.location}</p>
+              </div>
+            </div>
+
+            <Button variant="outline" className="w-full" asChild>
+              <a href={selectedCompany.website} target="_blank" rel="noopener noreferrer">
+                Visit website
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }
