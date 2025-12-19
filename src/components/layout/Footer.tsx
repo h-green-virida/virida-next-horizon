@@ -45,8 +45,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Terms of Service
+                <Link to="/sfdr" className="text-muted-foreground hover:text-foreground transition-colors">
+                  EU SFDR Disclosures
                 </Link>
               </li>
               
