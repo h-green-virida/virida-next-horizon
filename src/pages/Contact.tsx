@@ -119,22 +119,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="p-8 rounded-2xl bg-card border border-border">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Calendar className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-lg font-semibold text-foreground">Schedule a call</h3>
-                      <p className="text-muted-foreground mt-1">Book time directly with our investment team</p>
-                      <Button variant="outline" size="sm" className="mt-4" asChild>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
-                          Book a meeting
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+                
 
                 <div className="p-8 rounded-2xl bg-card border border-border">
                   <div className="flex items-start gap-4">
