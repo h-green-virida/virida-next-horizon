@@ -14,7 +14,7 @@ export function Footer() {
               and unlock the future of clean energy. Based in Europe, building globally.
             </p>
             <div className="flex items-center gap-4 mt-6">
-              <a href="mailto:hello@viridacapital.com" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-foreground transition-colors" aria-label="Email">
+              <a href="mailto:hello@virida-capital.com" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-foreground transition-colors" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </a>
               <a href="https://linkedin.com/company/viridacapital" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-foreground transition-colors" aria-label="LinkedIn">
