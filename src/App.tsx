@@ -10,6 +10,7 @@ import Team from "./pages/Team";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import SFDR from "./pages/SFDR";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/sfdr" element={<SFDR />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
