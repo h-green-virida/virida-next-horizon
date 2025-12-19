@@ -76,11 +76,14 @@ export default function Index() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Effects */}
+      {/* Fixed Background Effects */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-hero" />
         <ParticleNetwork />
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         
         {/* Decorative Elements */}
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow" />
