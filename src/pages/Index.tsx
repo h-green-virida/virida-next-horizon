@@ -152,8 +152,8 @@ export default function Index() {
                     { value: 'Seed to Series A', label: 'Stage' },
                     { value: '€1-8M', label: 'Ticket Size' },
                   ].map((stat, index) => (
-                    <div key={index} className="text-center p-6 rounded-xl bg-background/50 backdrop-blur">
-                      <p className="font-display text-xl font-semibold text-foreground">{stat.value}</p>
+                    <div key={index} className="text-center p-6 rounded-xl bg-primary/10 border border-primary/20 backdrop-blur">
+                      <p className="font-display text-xl font-semibold text-primary">{stat.value}</p>
                       <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
                     </div>
                   ))}
