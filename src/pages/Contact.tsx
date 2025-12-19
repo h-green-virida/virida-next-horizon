@@ -6,34 +6,33 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Calendar, Send } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    message: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     toast({
       title: 'Message sent',
-      description: "We'll get back to you within 48 hours.",
+      description: "We'll get back to you within 48 hours."
     });
-    
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      message: ''
+    });
     setIsSubmitting(false);
   };
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div className="container mx-auto px-6 lg:px-8">
@@ -62,55 +61,38 @@ export default function Contact() {
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Name
                     </label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Your name"
-                      required
-                      className="h-12"
-                    />
+                    <Input id="name" value={formData.name} onChange={e => setFormData({
+                    ...formData,
+                    name: e.target.value
+                  })} placeholder="Your name" required className="h-12" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       Email
                     </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="you@company.com"
-                      required
-                      className="h-12"
-                    />
+                    <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })} placeholder="you@company.com" required className="h-12" />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
                     Company
                   </label>
-                  <Input
-                    id="company"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    placeholder="Your company name"
-                    className="h-12"
-                  />
+                  <Input id="company" value={formData.company} onChange={e => setFormData({
+                  ...formData,
+                  company: e.target.value
+                })} placeholder="Your company name" className="h-12" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your company and what you're building..."
-                    rows={6}
-                    required
-                    className="resize-none"
-                  />
+                  <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                  ...formData,
+                  message: e.target.value
+                })} placeholder="Tell us about your company and what you're building..." rows={6} required className="resize-none" />
                 </div>
                 <Button type="submit" variant="hero" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
                   {isSubmitting ? 'Sending...' : 'Send message'}
@@ -131,7 +113,7 @@ export default function Contact() {
                       <h3 className="font-display text-lg font-semibold text-foreground">Email us</h3>
                       <p className="text-muted-foreground mt-1">For general enquiries and founder introductions</p>
                       <a href="mailto:hello@viridacapital.com" className="text-accent hover:underline mt-2 inline-block">
-                        hello@viridacapital.com
+                        hello@virida-capital.com
                       </a>
                     </div>
                   </div>
@@ -174,6 +156,5 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
