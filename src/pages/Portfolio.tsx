@@ -98,8 +98,13 @@ export default function Portfolio() {
                 onClick={() => setSelectedCompany(company)}
                 className="group p-8 rounded-2xl border border-border bg-card text-left hover-lift transition-all"
               >
-                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors overflow-hidden">
-                  {company.logo.startsWith('/') || company.logo.startsWith('data:') || company.logo.includes('/assets/') ? (
+                <div className={cn(
+                  "w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-colors overflow-hidden",
+                  company.logo.startsWith?.('/') || (typeof company.logo === 'string' && company.logo.includes('/assets/'))
+                    ? "bg-white"
+                    : "bg-secondary group-hover:bg-primary/10"
+                )}>
+                  {typeof company.logo === 'string' && (company.logo.startsWith('/') || company.logo.includes('/assets/')) ? (
                     <img src={company.logo} alt={company.name} className="w-12 h-12 object-contain" />
                   ) : (
                     <span className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -134,8 +139,13 @@ export default function Portfolio() {
             </button>
             
             <div className="flex items-start gap-6 mb-6">
-              <div className="w-20 h-20 rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
-                {selectedCompany.logo.startsWith('/') || selectedCompany.logo.startsWith('data:') || selectedCompany.logo.includes('/assets/') ? (
+              <div className={cn(
+                "w-20 h-20 rounded-xl flex items-center justify-center overflow-hidden",
+                typeof selectedCompany.logo === 'string' && (selectedCompany.logo.startsWith('/') || selectedCompany.logo.includes('/assets/'))
+                  ? "bg-white"
+                  : "bg-secondary"
+              )}>
+                {typeof selectedCompany.logo === 'string' && (selectedCompany.logo.startsWith('/') || selectedCompany.logo.includes('/assets/')) ? (
                   <img src={selectedCompany.logo} alt={selectedCompany.name} className="w-16 h-16 object-contain" />
                 ) : (
                   <span className="font-display text-2xl font-semibold text-foreground">
