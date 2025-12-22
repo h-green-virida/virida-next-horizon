@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import logoVirida from '@/assets/logo-virida.png';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -42,11 +43,8 @@ export function Navbar() {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            to="/"
-            className="font-display text-xl font-semibold tracking-tight text-foreground hover:text-primary transition-colors"
-          >
-            Virida Capital
+          <Link to="/" className="hover:opacity-80 transition-opacity">
+            <img src={logoVirida} alt="Virida" className="h-8" />
           </Link>
 
           {/* Desktop Navigation */}
