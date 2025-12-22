@@ -69,10 +69,12 @@ export default function Team() {
                 key={index}
                 className="group p-8 rounded-2xl border border-border bg-card hover:bg-card/80 transition-all"
               >
-                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-6">
-                  <span className="font-display text-2xl font-semibold text-foreground">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden mb-6">
+                  <img 
+                    src={`https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face&q=80&seed=${index}`}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-foreground">{member.name}</h3>
                 <p className="text-sm text-accent font-medium mt-1 mb-4">{member.role}</p>
