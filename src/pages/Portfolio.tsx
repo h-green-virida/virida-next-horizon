@@ -5,6 +5,8 @@ import { X, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import logoMarcley from '@/assets/logo-marcley.png';
+import bgSolarPv from '@/assets/bg-solar-pv.png';
+
 const companies = [
   {
     name: 'Undisclosed',
@@ -15,6 +17,7 @@ const companies = [
     founded: '2025',
     location: 'United Kingdom',
     website: '#',
+    backgroundImage: bgSolarPv,
   },
   {
     name: 'Undisclosed',
@@ -25,6 +28,7 @@ const companies = [
     founded: '2024',
     location: 'Netherlands',
     website: '#',
+    backgroundImage: bgSolarPv,
   },
   {
     name: 'Marcley',
@@ -35,6 +39,7 @@ const companies = [
     founded: '2022',
     location: 'Hanover, Germany',
     website: 'https://www.marcley.com',
+    backgroundImage: bgSolarPv,
   },
 ];
 
@@ -96,8 +101,20 @@ export default function Portfolio() {
               <button
                 key={index}
                 onClick={() => setSelectedCompany(company)}
-                className="group p-8 rounded-2xl border border-border bg-card text-left hover-lift transition-all"
+                className="group relative rounded-2xl border border-border overflow-hidden text-left hover-lift transition-all"
               >
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={company.backgroundImage} 
+                    alt="" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
+                </div>
+                
+                {/* Content */}
+                <div className="relative p-8">
                 <div className={cn(
                   "w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-colors overflow-hidden",
                   company.logo.startsWith?.('/') || (typeof company.logo === 'string' && company.logo.includes('/assets/'))
@@ -117,6 +134,7 @@ export default function Portfolio() {
                 </span>
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">{company.name}</h3>
                 <p className="text-sm text-muted-foreground">{company.description}</p>
+                </div>
               </button>
             ))}
           </div>
