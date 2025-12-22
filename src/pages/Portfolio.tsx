@@ -4,7 +4,7 @@ import { SectionHeading } from '@/components/shared/SectionHeading';
 import { X, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-
+import logoMarcley from '@/assets/logo-marcley.png';
 const companies = [
   {
     name: 'Undisclosed',
@@ -28,7 +28,7 @@ const companies = [
   },
   {
     name: 'Marcley',
-    logo: 'MC',
+    logo: logoMarcley,
     sector: 'Infrastructure',
     description: 'Giving multi-tenant buildings access to cheap, clean energy.',
     longDescription: 'Marcley provides a hardware and software solution that enables multi-tenant buildings to deploy self-generated solar energy for tenants, seamlessly managing the grid, on-site generation, and other connected assets - whilst saving costs and reducing emissions.',
@@ -98,10 +98,14 @@ export default function Portfolio() {
                 onClick={() => setSelectedCompany(company)}
                 className="group p-8 rounded-2xl border border-border bg-card text-left hover-lift transition-all"
               >
-                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-                  <span className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {company.logo}
-                  </span>
+                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors overflow-hidden">
+                  {company.logo.startsWith('/') || company.logo.startsWith('data:') || company.logo.includes('/assets/') ? (
+                    <img src={company.logo} alt={company.name} className="w-12 h-12 object-contain" />
+                  ) : (
+                    <span className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {company.logo}
+                    </span>
+                  )}
                 </div>
                 <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
                   {company.sector}
@@ -130,10 +134,14 @@ export default function Portfolio() {
             </button>
             
             <div className="flex items-start gap-6 mb-6">
-              <div className="w-20 h-20 rounded-xl bg-secondary flex items-center justify-center">
-                <span className="font-display text-2xl font-semibold text-foreground">
-                  {selectedCompany.logo}
-                </span>
+              <div className="w-20 h-20 rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
+                {selectedCompany.logo.startsWith('/') || selectedCompany.logo.startsWith('data:') || selectedCompany.logo.includes('/assets/') ? (
+                  <img src={selectedCompany.logo} alt={selectedCompany.name} className="w-16 h-16 object-contain" />
+                ) : (
+                  <span className="font-display text-2xl font-semibold text-foreground">
+                    {selectedCompany.logo}
+                  </span>
+                )}
               </div>
               <div>
                 <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-2">
