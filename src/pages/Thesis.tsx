@@ -154,7 +154,7 @@ export default function Thesis() {
             />
             <div className="mt-12 grid sm:grid-cols-3 gap-8">
               {[
-                { title: 'Seed to Series A', description: 'We lead or co-lead rounds of €1-5M, with meaningful reserves for follow-on.' },
+                { title: 'Seed to Series A', description: 'We lead or co-lead rounds of €1-8M, with meaningful reserves for follow-on.' },
                 { title: 'Active Builders', description: 'We work hands-on with founders on technical validation, team building, and go-to-market.' },
                 { title: 'Network Effects', description: 'We connect portfolio companies to industry partners, customers, and talent across Europe.' },
               ].map((item, index) => (
