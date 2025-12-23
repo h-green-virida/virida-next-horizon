@@ -5,7 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { ParticleNetwork } from '@/components/shared/ParticleNetwork';
 import { SectionHeading } from '@/components/shared/SectionHeading';
-
+import { cn } from '@/lib/utils';
+import logoMarcley from '@/assets/logo-marcley.png';
+import bgSolarPv from '@/assets/bg-solar-pv.png';
 const focusAreas = [
   {
     icon: Zap,
@@ -44,6 +46,7 @@ const portfolioPreview = [
     founded: '2025',
     location: 'United Kingdom',
     website: '#',
+    backgroundImage: bgSolarPv,
   },
   { 
     name: 'Undisclosed', 
@@ -54,16 +57,18 @@ const portfolioPreview = [
     founded: '2024',
     location: 'Netherlands',
     website: '#',
+    backgroundImage: bgSolarPv,
   },
   { 
     name: 'Marcley', 
-    logo: 'MC', 
+    logo: logoMarcley, 
     sector: 'Infrastructure', 
     description: 'Giving multi-tenant buildings access to cheap, clean energy.',
     longDescription: 'Marcley provides a hardware and software solution that enables multi-tenant buildings to deploy self-generated solar energy for tenants, seamlessly managing the grid, on-site generation, and other connected assets - whilst saving costs and reducing emissions.',
     founded: '2022',
     location: 'Hanover, Germany',
     website: 'https://www.marcley.com',
+    backgroundImage: bgSolarPv,
   },
 ];
 
@@ -219,18 +224,40 @@ export default function Index() {
               <button
                 key={index}
                 onClick={() => setSelectedCompany(company)}
-                className="group p-8 rounded-2xl border border-border bg-card text-left hover-lift transition-all"
+                className="group relative rounded-2xl border border-border overflow-hidden text-left hover-lift transition-all"
               >
-                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-                  <span className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {company.logo}
-                  </span>
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={company.backgroundImage} 
+                    alt="" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
                 </div>
-                <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
-                  {company.sector}
-                </span>
-                <h3 className="font-display text-xl font-semibold text-foreground mb-2">{company.name}</h3>
-                <p className="text-sm text-muted-foreground">{company.description}</p>
+                
+                {/* Content */}
+                <div className="relative p-8">
+                  <div className={cn(
+                    "w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-colors overflow-hidden",
+                    typeof company.logo === 'string' && !company.logo.includes('/assets/')
+                      ? "bg-secondary group-hover:bg-primary/10"
+                      : "bg-white"
+                  )}>
+                    {typeof company.logo === 'string' && !company.logo.includes('/assets/') ? (
+                      <span className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {company.logo}
+                      </span>
+                    ) : (
+                      <img src={company.logo} alt={company.name} className="w-12 h-12 object-contain" />
+                    )}
+                  </div>
+                  <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
+                    {company.sector}
+                  </span>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">{company.name}</h3>
+                  <p className="text-sm text-muted-foreground">{company.description}</p>
+                </div>
               </button>
             ))}
           </div>
