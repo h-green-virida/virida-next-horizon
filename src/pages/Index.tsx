@@ -170,7 +170,7 @@ export default function Index() {
       </section>
 
       {/* Focus Areas Section */}
-      <section className="py-24 lg:py-32 bg-card">
+      <section className="py-24 lg:py-32 bg-[hsl(270,50%,97%)] dark:bg-[hsl(270,30%,12%)]">
         <div className="container mx-auto px-6 lg:px-8">
           <SectionHeading
             eyebrow="Investment Focus"
