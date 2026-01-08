@@ -270,7 +270,7 @@ export default function Index() {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <SectionHeading
               eyebrow="Insights"
-              title="Latest from our blog"
+              title="Latest news"
               description="Perspectives on climate hardware innovation and the energy transition."
             />
             <Button variant="outline" asChild>
