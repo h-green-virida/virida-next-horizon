@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Calendar, Clock } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { SectionHeading } from '@/components/shared/SectionHeading';
 import { blogPosts } from '@/data/blogPosts';
@@ -62,10 +62,6 @@ export default function Blog() {
                         month: 'short', 
                         year: 'numeric' 
                       })}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="h-3.5 w-3.5" />
-                      {post.readTime}
                     </span>
                   </div>
                 </div>
