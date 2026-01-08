@@ -25,8 +25,8 @@ export default function Blog() {
       {/* Blog Grid */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {blogPosts.slice(0, 4).map((post) => (
               <Link
                 key={post.id}
                 to={`/blog/${post.slug}`}
@@ -37,7 +37,7 @@ export default function Blog() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                       <span className="font-display text-2xl font-semibold text-primary">
-                        {post.category.charAt(0)}
+                        V
                       </span>
                     </div>
                   </div>
@@ -45,11 +45,6 @@ export default function Blog() {
 
                 {/* Content */}
                 <div className="flex flex-col flex-1 p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
                   
                   <h2 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {post.title}
