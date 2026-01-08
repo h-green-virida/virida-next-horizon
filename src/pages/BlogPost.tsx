@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { getBlogPostBySlug, blogPosts } from '@/data/blogPosts';
@@ -30,9 +30,6 @@ export default function BlogPost() {
               </Link>
             </Button>
             
-            <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-6">
-              {post.category}
-            </span>
             
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight leading-tight">
               {post.title}
@@ -47,10 +44,6 @@ export default function BlogPost() {
                   year: 'numeric' 
                 })}
               </span>
-              <span className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
-                {post.readTime}
-              </span>
             </div>
           </div>
         </div>
@@ -63,7 +56,7 @@ export default function BlogPost() {
             <div className="aspect-[21/9] bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center">
               <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
                 <span className="font-display text-4xl font-semibold text-primary">
-                  {post.category.charAt(0)}
+                  V
                 </span>
               </div>
             </div>
@@ -108,15 +101,12 @@ export default function BlogPost() {
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                           <span className="font-display text-xl font-semibold text-primary">
-                            {relatedPost.category.charAt(0)}
+                            V
                           </span>
                         </div>
                       </div>
                     </div>
                     <div className="p-6">
-                      <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3">
-                        {relatedPost.category}
-                      </span>
                       <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                         {relatedPost.title}
                       </h3>
