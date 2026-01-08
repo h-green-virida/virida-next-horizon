@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Atom, Battery, Car, Settings, Calendar, Clock, X, ExternalLink } from 'lucide-react';
+import { ArrowRight, Zap, Atom, Battery, Car, Settings, Calendar, X, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { ParticleNetwork } from '@/components/shared/ParticleNetwork';
@@ -291,15 +291,12 @@ export default function Index() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <span className="font-display text-xl font-semibold text-primary">
-                        {post.category.charAt(0)}
+                        V
                       </span>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col flex-1 p-6">
-                  <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3 w-fit">
-                    {post.category}
-                  </span>
                   <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {post.title}
                   </h3>
@@ -314,10 +311,6 @@ export default function Index() {
                         month: 'short', 
                         year: 'numeric' 
                       })}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="h-3.5 w-3.5" />
-                      {post.readTime}
                     </span>
                   </div>
                 </div>
