@@ -112,8 +112,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-display text-lg font-semibold text-foreground">Email us</h3>
                       <p className="text-muted-foreground mt-1">For general enquiries and founder introductions</p>
-                      <a href="mailto:hello@viridacapital.com" className="text-accent hover:underline mt-2 inline-block">
-                        hello@virida-capital.com
+                      <a href="mailto:info@virida-capital.com" className="text-accent hover:underline mt-2 inline-block">
+                        info@virida-capital.com
                       </a>
                     </div>
                   </div>
