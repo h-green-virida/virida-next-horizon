@@ -17,7 +17,7 @@ export function Footer() {
               <a href="mailto:hello@virida-capital.com" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-foreground transition-colors" aria-label="Email">
                 <Mail className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com/company/viridacapital" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-foreground transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/virida-capital/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 text-foreground transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
