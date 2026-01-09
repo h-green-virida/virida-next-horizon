@@ -1,6 +1,11 @@
 import { Layout } from '@/components/layout/Layout';
 import { SectionHeading } from '@/components/shared/SectionHeading';
 import { Linkedin } from 'lucide-react';
+import nielsImg from '@/assets/team-niels.png';
+import alexandraImg from '@/assets/team-alexandra.png';
+import harleyImg from '@/assets/team-harley.png';
+import annikaImg from '@/assets/team-annika.png';
+import joppeImg from '@/assets/team-joppe.png';
 
 const team = [
   {
@@ -8,36 +13,35 @@ const team = [
     role: 'Managing Partner',
     bio: 'Founder of Green Giraffe, Europe\'s leading renewables advisory firm, working on >€5bn of transactions annually. Built and grew a clean energy investment vehicle to >€120m in AUM and delivered multiple exits.',
     linkedin: 'https://www.linkedin.com/in/niels-jongste-1758104/',
+    image: nielsImg,
   },
   {
     name: 'Alexandra Nilsson',
     role: 'Managing Partner',
     bio: 'Former leader at Macquarie\'s green investment banking division in Europe, a pioneer in energy transition finance. Set up her own advisory firm, working on several first of a kind transactions such as Ikea\'s first ever offshore wind investment',
     linkedin: 'https://www.linkedin.com/in/alexandra-nilsson-a8065339/',
+    image: alexandraImg,
   },
   {
     name: 'Harley Green',
     role: 'Investment Manager',
     bio: 'Senior employee at two early-stage VC funds covering climate tech, sourcing and leading several investments into now category leading businesses. Sat on multiple company boards, LP in several emerging VC funds, and active angel investor.',
     linkedin: 'https://www.linkedin.com/in/harleycgreen/',
+    image: harleyImg,
   },
   {
     name: 'Annika Berghauser',
     role: 'Investment Manager',
     bio: 'Extensive clean energy investment advisory experience covering Europe, the US, and Japan. Previously worked at KfW-IPEX, and the International Energy Agency.',
     linkedin: 'https://www.linkedin.com/in/annika-bergh%C3%A4user-247a4263/',
+    image: annikaImg,
   },
   {
     name: 'Joppe Eising',
     role: 'Analyst',
     bio: 'Formerly at Impulse, a financial advisory firm for impact tech startups in energy and health.',
     linkedin: 'https://www.linkedin.com/in/joppe-eising/',
-  },
-  {
-    name: 'Advisor Name',
-    role: 'Advisor',
-    bio: 'Description of the advisor\'s background and expertise in the energy sector.',
-    linkedin: '#',
+    image: joppeImg,
   },
 ];
 
@@ -71,7 +75,7 @@ export default function Team() {
               >
                 <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden mb-6">
                   <img 
-                    src={`https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face&q=80&seed=${index}`}
+                    src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
