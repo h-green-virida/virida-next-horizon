@@ -363,10 +363,19 @@ export default function Index() {
             </button>
             
             <div className="flex items-start gap-6 mb-6">
-              <div className="w-20 h-20 rounded-xl bg-secondary flex items-center justify-center">
-                <span className="font-display text-2xl font-semibold text-foreground">
-                  {selectedCompany.logo}
-                </span>
+              <div className={cn(
+                "w-20 h-20 rounded-xl flex items-center justify-center overflow-hidden",
+                typeof selectedCompany.logo === 'string' && !selectedCompany.logo.includes('/assets/')
+                  ? "bg-secondary"
+                  : "bg-white"
+              )}>
+                {typeof selectedCompany.logo === 'string' && !selectedCompany.logo.includes('/assets/') ? (
+                  <span className="font-display text-2xl font-semibold text-foreground">
+                    {selectedCompany.logo}
+                  </span>
+                ) : (
+                  <img src={selectedCompany.logo} alt={selectedCompany.name} className="w-16 h-16 object-contain" />
+                )}
               </div>
               <div>
                 <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-2">
