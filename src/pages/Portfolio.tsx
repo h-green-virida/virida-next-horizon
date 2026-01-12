@@ -38,7 +38,7 @@ const companies = [
     longDescription: 'Marcley provides a hardware and software solution that enables multi-tenant buildings to deploy self-generated solar energy for tenants, seamlessly managing the grid, on-site generation, and other connected assets - whilst saving costs and reducing emissions.',
     founded: '2022',
     location: 'Hanover, Germany',
-    website: 'https://www.marcley.com',
+    website: 'https://www.marcley.de/',
     backgroundImage: bgSolarPv,
   },
 ];
