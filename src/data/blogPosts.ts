@@ -19,12 +19,12 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p>We live in a time where pretty much everything is being offered "as-a-service", from your clothes to charging your car. This model is becoming increasingly popular in climate tech, where new technologies are most often hardware based and may have large upfront capital costs. But "a-a-S" is no magic fix; you can't turn steel, concrete, or electrons into recurring revenue streams just because you want to. Instead, you need a thorough understanding of the customer needs, structuring and financing aspects of turning gross margin into recurring revenue.</p>
       
-      <p><a href="https://open.substack.com/pub/viridacapital/p/climate-solutions-as-a-service-hype?r=76a0i3&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer">Read the full article here</a></p>
+      <p>Read the full article <a href="https://open.substack.com/pub/viridacapital/p/climate-solutions-as-a-service-hype?r=76a0i3&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a></p>
     `,
     category: 'Insights',
     date: '2025-09-09',
     readTime: '5 min read',
-    image: null,
+    image: '/src/assets/blog-climate-as-a-service.png',
   },
   {
     id: 2,
