@@ -49,17 +49,25 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {/* Featured Image Placeholder */}
+      {/* Featured Image */}
       <section className="pb-12">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="aspect-[21/9] bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center">
-              <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
-                <span className="font-display text-4xl font-semibold text-primary">
-                  V
-                </span>
+            {post.image ? (
+              <img 
+                src={post.image} 
+                alt={post.title}
+                className="w-full aspect-[21/9] object-cover rounded-2xl"
+              />
+            ) : (
+              <div className="aspect-[21/9] bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="font-display text-4xl font-semibold text-primary">
+                    V
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>
