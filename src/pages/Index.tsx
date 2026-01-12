@@ -46,7 +46,7 @@ const portfolioPreview = [
     founded: '2025',
     location: 'United Kingdom',
     website: '#',
-    backgroundImage: bgSolarPv,
+    backgroundImage: undefined as string | undefined, // Placeholder for future image
   },
   { 
     name: 'Undisclosed', 
@@ -57,7 +57,7 @@ const portfolioPreview = [
     founded: '2024',
     location: 'Netherlands',
     website: '#',
-    backgroundImage: bgSolarPv,
+    backgroundImage: undefined as string | undefined, // Placeholder for future image
   },
   { 
     name: 'Marcley', 
@@ -228,11 +228,15 @@ export default function Index() {
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
-                  <img 
-                    src={company.backgroundImage} 
-                    alt="" 
-                    className="w-full h-full object-cover"
-                  />
+                  {company.backgroundImage ? (
+                    <img 
+                      src={company.backgroundImage} 
+                      alt="" 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-secondary to-card" />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
                 </div>
                 
