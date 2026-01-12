@@ -13,33 +13,17 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    slug: 'rise-of-long-duration-energy-storage',
-    title: 'The Rise of Long-Duration Energy Storage',
-    excerpt: 'As renewable energy penetration increases, the need for storage solutions that can balance supply and demand over hours, days, and even seasons becomes critical.',
+    slug: 'climate-solutions-as-a-service',
+    title: 'Climate solutions-as-a-Service: hype or real solution for faster asset deployment?',
+    excerpt: 'We live in a time where pretty much everything is being offered "as-a-service", from your clothes to charging your car. This model is becoming increasingly popular in climate tech.',
     content: `
-      <p>As renewable energy sources like wind and solar continue to grow their share of the global electricity mix, a fundamental challenge emerges: how do we balance supply and demand when the sun doesn't shine and the wind doesn't blow?</p>
+      <p>We live in a time where pretty much everything is being offered "as-a-service", from your clothes to charging your car. This model is becoming increasingly popular in climate tech, where new technologies are most often hardware based and may have large upfront capital costs. But "a-a-S" is no magic fix; you can't turn steel, concrete, or electrons into recurring revenue streams just because you want to. Instead, you need a thorough understanding of the customer needs, structuring and financing aspects of turning gross margin into recurring revenue.</p>
       
-      <h2>The Challenge of Intermittency</h2>
-      <p>Traditional electricity grids were designed around dispatchable power sources—coal, gas, and nuclear plants that could be turned on and off based on demand. Renewable energy flips this model on its head, creating a system where supply is dictated by weather patterns rather than consumption needs.</p>
-      
-      <h2>Beyond Lithium-Ion</h2>
-      <p>While lithium-ion batteries have revolutionised short-duration storage (typically 2-4 hours), they face significant limitations for longer durations. The economics simply don't work when you need to store energy for days or weeks at a time.</p>
-      
-      <h2>Emerging Technologies</h2>
-      <p>A new generation of storage technologies is emerging to fill this gap:</p>
-      <ul>
-        <li><strong>Flow batteries</strong> offer scalable capacity independent of power ratings</li>
-        <li><strong>Compressed air energy storage</strong> leverages geological formations for massive scale</li>
-        <li><strong>Thermal storage</strong> converts electricity to heat for later recovery</li>
-        <li><strong>Green hydrogen</strong> enables seasonal storage through chemical conversion</li>
-      </ul>
-      
-      <h2>The Investment Opportunity</h2>
-      <p>At Virida, we see long-duration energy storage as one of the most critical enablers of a fully decarbonised grid. The companies that crack this challenge will unlock trillions of dollars in renewable energy investment that is currently constrained by intermittency concerns.</p>
+      <p><a href="https://open.substack.com/pub/viridacapital/p/climate-solutions-as-a-service-hype?r=76a0i3&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer">Read the full article here</a></p>
     `,
-    category: 'Storage',
-    date: '2024-12-10',
-    readTime: '6 min read',
+    category: 'Insights',
+    date: '2025-09-09',
+    readTime: '5 min read',
     image: null,
   },
   {
