@@ -23,7 +23,7 @@ const companies = [
     name: 'Undisclosed',
     logo: 'UD',
     sector: 'Industrial Heat',
-    description: 'undiscosed',
+    description: 'Undisclosed',
     longDescription: 'Undisclosed',
     founded: '2024',
     location: 'Netherlands',
