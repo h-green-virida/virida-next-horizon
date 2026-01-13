@@ -1,3 +1,5 @@
+import blogClimateAsAService from '@/assets/blog-climate-as-a-service.png';
+
 export interface BlogPost {
   id: number;
   slug: string;
@@ -24,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Insights',
     date: '2025-09-09',
     readTime: '5 min read',
-    image: '/src/assets/blog-climate-as-a-service.png',
+    image: blogClimateAsAService,
   },
   {
     id: 2,
