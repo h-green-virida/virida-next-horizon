@@ -1,5 +1,6 @@
 import blogClimateAsAService from '@/assets/blog-climate-as-a-service.png';
 import blogHarleyPodcast from '@/assets/blog-harley-podcast.jpg';
+import blogMarcley from '@/assets/blog-marcley.jpg';
 
 export interface BlogPost {
   id: number;
@@ -64,31 +65,18 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    slug: 'decarbonising-heavy-industry',
-    title: 'Decarbonising Heavy Industry: The Hardware Challenge',
-    excerpt: 'Steel, cement, and chemicals account for nearly 30% of global emissions. We explore the breakthrough technologies that could transform these sectors.',
+    slug: 'virida-invests-in-marcley',
+    title: 'Over 4 million euros for the energy transition of apartment buildings: VIRIDA invests in Marcley',
+    excerpt: 'The greentech startup MARCLEY from Hanover announces the successful completion of its latest financing round of over 4 million euros, led by Virida Capital.',
     content: `
-      <p>While the electrification of transport and power generation dominates climate discourse, a harder challenge lurks in the background: decarbonising the industries that make modern civilisation possible.</p>
+      <p>Hanover, 30th July 2024 – Today the greentech startup MARCLEY from Hanover announces the successful completion of its latest financing round of over 4 million euros. The round was led by investors Virida Capital, a new energy hardware VC, Munich-based VC Venture Stars and well-known business angels including Emma Tracey and Florian Bennhold. The previous investors, such as the Hanover investment fund managed by Enjoy Ventures and the investor Climate Founders, also took part in the round again. In addition, this round was expanded by MBG and banks in the form of debt and mezzanine capital.</p>
       
-      <h2>The Scale of the Challenge</h2>
-      <p>Steel, cement, and chemicals together account for roughly 30% of global CO2 emissions. These industries are characterised by high temperatures, massive scale, and razor-thin margins—making decarbonisation exceptionally difficult.</p>
-      
-      <h2>Breakthrough Technologies</h2>
-      <p>A new generation of hardware startups is tackling these challenges head-on:</p>
-      <ul>
-        <li><strong>Green steel</strong> using hydrogen-based direct reduction</li>
-        <li><strong>Novel cement chemistries</strong> that reduce or eliminate process emissions</li>
-        <li><strong>Electrochemical processes</strong> replacing thermal routes in chemicals</li>
-        <li><strong>Carbon capture</strong> for residual emissions that cannot be eliminated</li>
-      </ul>
-      
-      <h2>Our Investment Focus</h2>
-      <p>At Virida, we're actively seeking founders who are reimagining industrial processes from first principles. The prize is enormous: these are multi-trillion dollar markets ripe for disruption.</p>
+      <p>Read the full article <a href="https://marcley.de" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a>.</p>
     `,
-    category: 'Foundations',
-    date: '2024-11-15',
-    readTime: '7 min read',
-    image: null,
+    category: 'Portfolio',
+    date: '2024-07-30',
+    readTime: '2 min read',
+    image: blogMarcley,
   },
   {
     id: 4,
