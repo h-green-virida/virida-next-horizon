@@ -292,13 +292,21 @@ export default function Index() {
                 className="group flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover-lift"
               >
                 <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="font-display text-xl font-semibold text-primary">
-                        V
-                      </span>
+                  {post.image ? (
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span className="font-display text-xl font-semibold text-primary">
+                          V
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 <div className="flex flex-col flex-1 p-6">
                   <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
