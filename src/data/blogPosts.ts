@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p>Hanover, 30th July 2024 – Today the greentech startup MARCLEY from Hanover announces the successful completion of its latest financing round of over 4 million euros. The round was led by investors Virida Capital, a new energy hardware VC, Munich-based VC Venture Stars and well-known business angels including Emma Tracey and Florian Bennhold. The previous investors, such as the Hanover investment fund managed by Enjoy Ventures and the investor Climate Founders, also took part in the round again. In addition, this round was expanded by MBG and banks in the form of debt and mezzanine capital.</p>
       
-      <p>Read the full article <a href="https://marcley.de" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a>.</p>
+      <p>Read the full article <a href="https://open.substack.com/pub/viridacapital/p/over-4-million-euros-for-the-energy?r=76a0i3&utm_campaign=post&utm_medium=web" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a>.</p>
     `,
     category: 'Portfolio',
     date: '2024-07-30',
