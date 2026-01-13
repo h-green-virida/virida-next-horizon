@@ -1,4 +1,5 @@
 import blogClimateAsAService from '@/assets/blog-climate-as-a-service.png';
+import blogHarleyPodcast from '@/assets/blog-harley-podcast.jpg';
 
 export interface BlogPost {
   id: number;
@@ -30,30 +31,36 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 2,
-    slug: 'green-hydrogen-hype-to-reality',
-    title: 'Green Hydrogen: From Hype to Reality',
-    excerpt: 'We examine the economics of green hydrogen production and identify the sectors where it will first achieve cost competitiveness with fossil alternatives.',
+    slug: 'rethinking-venture-capital-energy-transition',
+    title: 'Rethinking Venture Capital for the Energy Transition: A Conversation with Harley Green at Zero One Hundred Impact Talks',
+    excerpt: 'Our colleague Harley Green sat down with 0100 Conferences to discuss how venture capital must evolve to meet the urgent demands of the energy transition.',
     content: `
-      <p>Green hydrogen has captured the imagination of policymakers, investors, and industry leaders alike. But beneath the hype lies a more nuanced reality about where and when hydrogen will actually make economic sense.</p>
+      <p>In a recent episode of 0100 Impact Talks, our colleague Harley Green sat down with the team at 0100 Conferences to discuss how venture capital must evolve to meet the urgent demands of the energy transition.</p>
       
-      <h2>Understanding the Economics</h2>
-      <p>Green hydrogen today costs roughly €4-6 per kilogram to produce, compared to €1-2 for grey hydrogen from natural gas. Closing this gap requires dramatic reductions in both electrolyser costs and renewable electricity prices.</p>
+      <p>In this episode, he explains how we're redefining climate venture with a new playbook designed to meet the scale, speed, and complexity of the net-zero challenge.</p>
       
-      <h2>Where Hydrogen Makes Sense</h2>
-      <p>Not every application touted for hydrogen actually makes economic or physical sense. We see the strongest near-term opportunities in:</p>
+      <h2>Why Traditional VC Doesn't Fit Climate Tech</h2>
+      <p>Most venture funding models were designed for lean, fast-scaling software startups — not for the CapEx-heavy, infrastructure-oriented companies driving climate innovation. As Harley puts it, "Europe needs a new funding model for climate tech hardware — one that embraces complexity instead of shying away from it."</p>
+      
+      <p>That's where Virida comes in. Our approach contributes equity investment with structured finance access and hands-on operational support. We help founders not just raise capital, but also unlock the door to the non-dilutive and project-based funding they need to scale breakthrough hardware technologies in sectors like energy, industry, and transport.</p>
+      
+      <h2>Key Takeaways from the Episode</h2>
+      <p>In the episode, Harley dives into:</p>
       <ul>
-        <li><strong>Industrial feedstock</strong> where hydrogen is already used (ammonia, refining)</li>
-        <li><strong>Heavy transport</strong> where batteries face weight and range limitations</li>
-        <li><strong>High-temperature industrial heat</strong> that cannot be easily electrified</li>
+        <li>Why Europe's funding ecosystem must evolve;</li>
+        <li>How Virida supports founders with access to non-dilutive capital;</li>
+        <li>What Limited Partners (LPs) expect from climate-focused venture funds today;</li>
+        <li>Why we believe "impact" isn't about ticking boxes — it's about delivering real-world outcomes.</li>
       </ul>
       
-      <h2>The Path Forward</h2>
-      <p>We believe green hydrogen will achieve cost parity with fossil alternatives in many applications by 2030, driven by manufacturing scale, improved efficiency, and continued declines in renewable energy costs.</p>
+      <p>Whether you're a founder navigating the capital stack, an LP exploring climate VC, or just curious about how we finance the transition to net-zero, this conversation is worth a listen.</p>
+      
+      <p>Listen to the full episode <a href="https://open.spotify.com/episode/1qU8xQoP7s6Y9v7oZq5Z8o" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a>.</p>
     `,
-    category: 'Molecules',
-    date: '2024-11-28',
-    readTime: '8 min read',
-    image: null,
+    category: 'Insights',
+    date: '2025-06-11',
+    readTime: '5 min read',
+    image: blogHarleyPodcast,
   },
   {
     id: 3,
