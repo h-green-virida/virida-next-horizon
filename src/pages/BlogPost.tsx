@@ -26,7 +26,7 @@ export default function BlogPost() {
             <Button variant="ghost" size="sm" asChild className="mb-8 -ml-2">
               <Link to="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Blog
+                Back to News
               </Link>
             </Button>
             
