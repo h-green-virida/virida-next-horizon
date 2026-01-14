@@ -1,6 +1,11 @@
 import { Layout } from '@/components/layout/Layout';
 import { SectionHeading } from '@/components/shared/SectionHeading';
 import { Zap, Atom, Battery, Car, Settings } from 'lucide-react';
+import sectorElectrons from '@/assets/sector-electrons.png';
+import sectorMolecules from '@/assets/sector-molecules.png';
+import sectorStorage from '@/assets/sector-storage.png';
+import sectorMobility from '@/assets/sector-mobility.png';
+import sectorFoundations from '@/assets/sector-foundations.png';
 
 const pillars = [
   {
@@ -8,30 +13,35 @@ const pillars = [
     title: 'Electrons',
     description: 'Technologies that generate, transmit, store, and intelligently manage electricity across the energy system. From advanced solar and wind to next-generation grid infrastructure, we back founders building the backbone of electrified economies.',
     examples: ['Advanced renewable generation', 'Grid modernisation and power electronics', 'Transmission and distribution infrastructure', 'Intelligent energy management systems'],
+    backgroundImage: sectorElectrons,
   },
   {
     icon: Atom,
     title: 'Molecules',
     description: 'Solutions enabling the production, conversion, and use of low carbon fuels, chemicals, and industrial feedstocks. The molecular economy must be reinvented to meet net zero targets across heavy industry and hard-to-abate sectors.',
     examples: ['Green hydrogen production', 'Low-carbon ammonia and methanol', 'Sustainable aviation fuels', 'Bio-based chemicals and feedstocks'],
+    backgroundImage: sectorMolecules,
   },
   {
     icon: Battery,
     title: 'Storage',
     description: 'Technologies that store energy or materials to balance supply and demand across time, scale, and applications. Storage is the linchpin of the energy transition, enabling flexibility across hours, days, and seasons.',
     examples: ['Next-gen battery chemistries', 'Long-duration energy storage', 'Thermal storage systems', 'Hydrogen and compressed air storage'],
+    backgroundImage: sectorStorage,
   },
   {
     icon: Car,
     title: 'Mobility',
     description: 'Systems and platforms that decarbonize the movement of people and goods across road, sea, and air. Transport accounts for a quarter of global emissions and requires fundamental hardware innovation.',
     examples: ['Electric vehicle components', 'Maritime decarbonisation', 'Aviation electrification', 'Charging infrastructure'],
+    backgroundImage: sectorMobility,
   },
   {
     icon: Settings,
     title: 'Foundations & Efficiencies',
     description: 'Core technologies that improve manufacturing, asset optimisation, and energy efficiency across the industrial value chain. Efficiency remains the cheapest form of clean energy.',
     examples: ['Industrial process optimisation', 'Smart sensors and IoT', 'Predictive maintenance platforms', 'Energy-efficient manufacturing'],
+    backgroundImage: sectorFoundations,
   },
 ];
 
@@ -111,30 +121,43 @@ export default function Thesis() {
             {pillars.map((pillar, index) => (
               <div
                 key={index}
-                className="group p-8 lg:p-12 rounded-2xl border border-border bg-card hover:bg-card/80 transition-colors"
+                className="group relative rounded-2xl border border-border overflow-hidden"
               >
-                <div className="grid lg:grid-cols-3 gap-8">
-                  <div className="lg:col-span-2">
-                    <div className="flex items-start gap-6">
-                      <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                        <pillar.icon className="h-7 w-7 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-display text-2xl font-semibold text-foreground mb-4">{pillar.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={pillar.backgroundImage} 
+                    alt="" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
+                </div>
+                
+                {/* Content */}
+                <div className="relative p-8 lg:p-12">
+                  <div className="grid lg:grid-cols-3 gap-8">
+                    <div className="lg:col-span-2">
+                      <div className="flex items-start gap-6">
+                        <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary/20 backdrop-blur-sm flex items-center justify-center">
+                          <pillar.icon className="h-7 w-7 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-display text-2xl font-semibold text-foreground mb-4">{pillar.title}</h3>
+                          <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="lg:border-l lg:border-border lg:pl-8">
-                    <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">Focus Areas</p>
-                    <ul className="space-y-2">
-                      {pillar.examples.map((example, i) => (
-                        <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                          <span className="w-1 h-1 rounded-full bg-accent" />
-                          {example}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="lg:border-l lg:border-border/50 lg:pl-8">
+                      <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">Focus Areas</p>
+                      <ul className="space-y-2">
+                        {pillar.examples.map((example, i) => (
+                          <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                            <span className="w-1 h-1 rounded-full bg-accent" />
+                            {example}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
