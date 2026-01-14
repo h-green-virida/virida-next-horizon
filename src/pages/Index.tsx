@@ -8,31 +8,42 @@ import { SectionHeading } from '@/components/shared/SectionHeading';
 import { cn } from '@/lib/utils';
 import logoMarcley from '@/assets/logo-marcley.png';
 import bgSolarPv from '@/assets/bg-solar-pv.png';
+import sectorElectrons from '@/assets/sector-electrons.png';
+import sectorMolecules from '@/assets/sector-molecules.png';
+import sectorStorage from '@/assets/sector-storage.png';
+import sectorMobility from '@/assets/sector-mobility.png';
+import sectorFoundations from '@/assets/sector-foundations.png';
+
 const focusAreas = [
   {
     icon: Zap,
     title: 'Electrons',
     description: 'Technologies that create and intelligently manage clean electricity across the energy system.',
+    backgroundImage: sectorElectrons,
   },
   {
     icon: Atom,
     title: 'Molecules',
     description: 'Solutions enabling the production, conversion, and use of physical energy carriers.',
+    backgroundImage: sectorMolecules,
   },
   {
     icon: Battery,
     title: 'Storage',
     description: 'Technologies that store energy to balance supply and demand across time, scale, and application.',
+    backgroundImage: sectorStorage,
   },
   {
     icon: Car,
     title: 'Mobility',
     description: 'Systems and platforms that decarbonise the movement of people and goods across land, sea, and air.',
+    backgroundImage: sectorMobility,
   },
   {
     icon: Settings,
     title: 'Foundations & Efficiencies',
     description: 'Core technologies that improve industry, manufacturing, and infrastructure efficiency.',
+    backgroundImage: sectorFoundations,
   },
 ];
 
@@ -182,13 +193,26 @@ export default function Index() {
             {focusAreas.map((area, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-2xl bg-background border border-border hover-lift cursor-pointer"
+                className="group relative rounded-2xl border border-border hover-lift cursor-pointer overflow-hidden min-h-[280px]"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <area.icon className="h-6 w-6 text-primary" />
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={area.backgroundImage} 
+                    alt="" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-3">{area.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>
+                
+                {/* Content */}
+                <div className="relative p-8 h-full flex flex-col justify-end">
+                  <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+                    <area.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{area.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>
+                </div>
               </div>
             ))}
           </div>
