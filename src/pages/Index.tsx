@@ -206,12 +206,14 @@ export default function Index() {
                 </div>
                 
                 {/* Content */}
-                <div className="relative p-8 h-full flex flex-col justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                    <area.icon className="h-6 w-6 text-primary" />
+                <div className="relative p-6 h-full flex flex-col">
+                  <div className="flex items-center gap-3 mb-auto">
+                    <div className="w-10 h-10 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center shrink-0 group-hover:bg-primary/30 transition-colors">
+                      <area.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="font-display text-base font-semibold text-foreground">{area.title}</h3>
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg font-semibold text-foreground mb-3">{area.title}</h3>
+                  <div className="mt-auto pt-4">
                     <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>
                   </div>
                 </div>
