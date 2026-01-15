@@ -32,7 +32,7 @@ const pillars = [
   {
     icon: Car,
     title: 'Mobility',
-    description: 'Systems and platforms that decarbonize the movement of people and goods across road, sea, and air. Transport accounts for a quarter of global emissions and requires fundamental hardware innovation.',
+    description: 'Systems and platforms that electrify the movement of people and goods across road, sea, and air. Transport accounts for a quarter of global emissions and requires fundamental hardware innovation.',
     examples: ['Electric vehicle components', 'Maritime decarbonisation', 'Aviation electrification', 'Charging infrastructure'],
     backgroundImage: sectorMobility,
   },
