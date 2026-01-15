@@ -130,7 +130,7 @@ export default function Thesis() {
                     alt="" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
                 </div>
                 
                 {/* Content */}
