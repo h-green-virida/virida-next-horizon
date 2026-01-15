@@ -105,15 +105,25 @@ export default function BlogPost() {
                     to={`/blog/${relatedPost.slug}`}
                     className="group flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover-lift"
                   >
-                    <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                          <span className="font-display text-xl font-semibold text-primary">
-                            V
-                          </span>
+                    {relatedPost.image ? (
+                      <div className="aspect-[16/10] relative overflow-hidden">
+                        <img 
+                          src={relatedPost.image} 
+                          alt={relatedPost.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    ) : (
+                      <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span className="font-display text-xl font-semibold text-primary">
+                              V
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    )}
                     <div className="p-6">
                       <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                         {relatedPost.title}
