@@ -36,7 +36,7 @@ const focusAreas = [
   {
     icon: Car,
     title: 'Mobility',
-    description: 'Systems and platforms that decarbonise the movement of people and goods across land, sea, and air.',
+    description: 'Systems and platforms that electrify the movement of people and goods across land, sea, and air.',
     backgroundImage: sectorMobility,
   },
   {
