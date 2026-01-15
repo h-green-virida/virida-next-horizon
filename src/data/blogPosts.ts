@@ -78,34 +78,20 @@ export const blogPosts: BlogPost[] = [
     readTime: '2 min read',
     image: blogMarcley,
   },
-  {
-    id: 4,
-    slug: 'grid-of-tomorrow',
-    title: 'The Grid of Tomorrow: Rebuilding Energy Infrastructure',
-    excerpt: 'The electricity grid was designed for centralised fossil fuel generation. The transition to distributed renewables demands fundamental reinvention.',
-    content: `
-      <p>The electricity grid is perhaps the most complex machine ever built by humanity. But it was designed for a world of centralised, dispatchable power plants—a world that is rapidly disappearing.</p>
-      
-      <h2>A System Under Stress</h2>
-      <p>Today's grids face unprecedented challenges: bidirectional power flows, intermittent generation, and exploding demand from EVs and heat pumps. Without fundamental upgrades, we risk brownouts and blackouts as renewable penetration increases.</p>
-      
-      <h2>The Opportunity Space</h2>
-      <p>We see massive opportunities across the grid value chain:</p>
-      <ul>
-        <li><strong>Grid-scale power electronics</strong> for voltage and frequency regulation</li>
-        <li><strong>Advanced conductors</strong> that double transmission capacity</li>
-        <li><strong>Software platforms</strong> for real-time grid optimisation</li>
-        <li><strong>Distributed energy resource management</strong> systems</li>
-      </ul>
-      
-      <h2>The Investment Case</h2>
-      <p>Global grid investment needs to double to over $600 billion annually by 2030. The companies building the hardware to enable this transformation will capture enormous value.</p>
-    `,
-    category: 'Electrons',
-    date: '2024-10-30',
-    readTime: '5 min read',
-    image: null,
-  },
+  // PLACEHOLDER: Add new article here
+  // {
+  //   id: 4,
+  //   slug: 'new-article-slug',
+  //   title: 'New Article Title',
+  //   excerpt: 'Brief excerpt describing the article.',
+  //   content: `
+  //     <p>Article content goes here.</p>
+  //   `,
+  //   category: 'Insights',
+  //   date: 'YYYY-MM-DD',
+  //   readTime: 'X min read',
+  //   image: null, // or import and use an image
+  // },
   {
     id: 5,
     slug: 'electric-aviation',
