@@ -92,62 +92,6 @@ export const blogPosts: BlogPost[] = [
   //   readTime: 'X min read',
   //   image: null, // or import and use an image
   // },
-  {
-    id: 5,
-    slug: 'electric-aviation',
-    title: 'Electric Aviation: When Will Planes Go Green?',
-    excerpt: 'Aviation is one of the hardest sectors to decarbonise. We analyse the pathways to zero-emission flight and the timeline for commercial viability.',
-    content: `
-      <p>Aviation accounts for roughly 2.5% of global CO2 emissions—and that share is growing as other sectors decarbonise. Can we make flight sustainable without giving up the benefits of air travel?</p>
-      
-      <h2>The Physics Challenge</h2>
-      <p>Batteries are heavy. Very heavy. While this is manageable for cars, it's a fundamental problem for aircraft where every kilogram counts. Today's best batteries have energy densities roughly 50x lower than jet fuel.</p>
-      
-      <h2>Pathways to Zero-Emission Flight</h2>
-      <p>Different solutions make sense for different flight segments:</p>
-      <ul>
-        <li><strong>Battery-electric</strong> for flights under 500km (urban air mobility, regional)</li>
-        <li><strong>Hydrogen fuel cells</strong> for regional flights up to 1,500km</li>
-        <li><strong>Hydrogen combustion</strong> for medium-haul routes</li>
-        <li><strong>Sustainable aviation fuels</strong> for long-haul where no other option exists</li>
-      </ul>
-      
-      <h2>The Timeline</h2>
-      <p>We expect to see commercial electric aircraft on short routes by 2026, with hydrogen aircraft following in the early 2030s. Long-haul decarbonisation remains the toughest nut to crack.</p>
-    `,
-    category: 'Mobility',
-    date: '2024-10-18',
-    readTime: '9 min read',
-    image: null,
-  },
-  {
-    id: 6,
-    slug: 'why-europe-leads-climate-hardware',
-    title: 'Why Europe Leads in Climate Hardware',
-    excerpt: 'Europe has emerged as the global epicentre for climate hardware innovation. We examine the factors driving this leadership and what it means for founders.',
-    content: `
-      <p>While Silicon Valley dominates software, Europe has quietly become the world leader in climate hardware innovation. What's driving this shift, and what does it mean for founders and investors?</p>
-      
-      <h2>The European Advantage</h2>
-      <p>Several factors combine to make Europe uniquely positioned for climate hardware:</p>
-      <ul>
-        <li><strong>Policy certainty</strong> through the European Green Deal and national net-zero targets</li>
-        <li><strong>Deep engineering talent</strong> from world-class technical universities</li>
-        <li><strong>Industrial heritage</strong> providing manufacturing know-how and supply chains</li>
-        <li><strong>Ambitious corporate buyers</strong> seeking to decarbonise their operations</li>
-      </ul>
-      
-      <h2>The Funding Landscape</h2>
-      <p>European climate tech funding has grown 10x over the past five years, with hardware companies increasingly able to raise the patient capital they need. Government co-investment programs have been particularly catalytic.</p>
-      
-      <h2>Our Thesis</h2>
-      <p>At Virida, we believe Europe's structural advantages in climate hardware will only strengthen over the coming decade. We're committed to backing the exceptional founders building category-defining companies from this continent.</p>
-    `,
-    category: 'Insights',
-    date: '2024-10-05',
-    readTime: '6 min read',
-    image: null,
-  },
 ];
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {
