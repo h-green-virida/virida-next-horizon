@@ -193,7 +193,7 @@ export default function Index() {
             {focusAreas.map((area, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl border border-border hover-lift cursor-pointer overflow-hidden min-h-[280px]"
+                className="group relative rounded-2xl border border-border hover-lift overflow-hidden min-h-[280px]"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
