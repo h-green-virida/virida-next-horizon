@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>Whether you're a founder navigating the capital stack, an LP exploring climate VC, or just curious about how we finance the transition to net-zero, this conversation is worth a listen.</p>
       
-      <p>Listen to the full episode <a href="https://open.spotify.com/episode/1qU8xQoP7s6Y9v7oZq5Z8o" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a>.</p>
+      <p>Listen to the full episode <a href="https://open.spotify.com/episode/1W0jM2oVw65MZ3YcK27aj8" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a>.</p>
     `,
     category: 'Insights',
     date: '2025-06-11',
