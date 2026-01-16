@@ -71,7 +71,7 @@ export default function Team() {
             {team.map((member, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-2xl border border-border bg-card hover:bg-card/80 transition-all"
+                className="group p-8 rounded-2xl border border-border bg-card hover:bg-card/80 transition-all flex flex-col h-full"
               >
                 <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden mb-6">
                   <img 
@@ -82,12 +82,12 @@ export default function Team() {
                 </div>
                 <h3 className="font-display text-xl font-semibold text-foreground">{member.name}</h3>
                 <p className="text-sm text-accent font-medium mt-1 mb-4">{member.role}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-6">{member.bio}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{member.bio}</p>
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mt-6"
                 >
                   <Linkedin className="h-4 w-4" />
                   LinkedIn
