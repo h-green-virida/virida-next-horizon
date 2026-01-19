@@ -64,6 +64,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-06-11',
     readTime: '5 min read',
     image: blogHarleyPodcast,
+    externalUrl: 'https://substack.com/home/post/p-183897958',
   },
   {
     id: 3,
