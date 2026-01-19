@@ -26,55 +26,62 @@ export default function Blog() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {blogPosts.slice(0, 4).map((post) => (
-              <Link
-                key={post.id}
-                to={`/blog/${post.slug}`}
-                className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover-lift"
-              >
-                {/* Image */}
-                <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
-                  {post.image ? (
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="font-display text-2xl font-semibold text-primary">
-                          V
-                        </span>
+            {blogPosts.slice(0, 4).map((post) => {
+              const CardWrapper = post.externalUrl ? 'a' : Link;
+              const cardProps = post.externalUrl 
+                ? { href: post.externalUrl, target: '_blank', rel: 'noopener noreferrer' }
+                : { to: `/blog/${post.slug}` };
+              
+              return (
+                <CardWrapper
+                  key={post.id}
+                  {...cardProps as any}
+                  className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover-lift"
+                >
+                  {/* Image */}
+                  <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
+                    {post.image ? (
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                          <span className="font-display text-2xl font-semibold text-primary">
+                            V
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="flex flex-col flex-1 p-6">
-                  
-                  <h2 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex items-center gap-4 mt-6 pt-4 border-t border-border text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="h-3.5 w-3.5" />
-                      {new Date(post.date).toLocaleDateString('en-GB', { 
-                        day: 'numeric', 
-                        month: 'short', 
-                        year: 'numeric' 
-                      })}
-                    </span>
+                    )}
                   </div>
-                </div>
-              </Link>
-            ))}
+
+                  {/* Content */}
+                  <div className="flex flex-col flex-1 p-6">
+                    
+                    <h2 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h2>
+                    
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                      {post.excerpt}
+                    </p>
+
+                    <div className="flex items-center gap-4 mt-6 pt-4 border-t border-border text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="h-3.5 w-3.5" />
+                        {new Date(post.date).toLocaleDateString('en-GB', { 
+                          day: 'numeric', 
+                          month: 'short', 
+                          year: 'numeric' 
+                        })}
+                      </span>
+                    </div>
+                  </div>
+                </CardWrapper>
+              );
+            })}
           </div>
         </div>
       </section>

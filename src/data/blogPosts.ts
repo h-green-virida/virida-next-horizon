@@ -12,6 +12,7 @@ export interface BlogPost {
   date: string;
   readTime: string;
   image: string | null;
+  externalUrl?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -29,6 +30,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-09-09',
     readTime: '5 min read',
     image: blogClimateAsAService,
+    externalUrl: 'https://open.substack.com/pub/viridacapital/p/climate-solutions-as-a-service-hype?r=76a0i3&utm_campaign=post&utm_medium=web',
   },
   {
     id: 2,
