@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Atom, Battery, Car, Settings, Calendar, X, ExternalLink } from 'lucide-react';
+import { ArrowRight, Zap, Atom, Battery, Car, Settings, X, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { ParticleNetwork } from '@/components/shared/ParticleNetwork';
 import { SectionHeading } from '@/components/shared/SectionHeading';
+import { NewsGrid } from '@/components/shared/NewsGrid';
 import { cn } from '@/lib/utils';
 import logoMarcley from '@/assets/logo-marcley.png';
 import bgSolarPv from '@/assets/bg-solar-pv.png';
@@ -57,7 +58,7 @@ const portfolioPreview = [
     founded: '2025',
     location: 'United Kingdom',
     website: '#',
-    backgroundImage: undefined as string | undefined, // Placeholder for future image
+    backgroundImage: undefined as string | undefined,
   },
   { 
     name: 'Undisclosed', 
@@ -68,7 +69,7 @@ const portfolioPreview = [
     founded: '2024',
     location: 'Netherlands',
     website: '#',
-    backgroundImage: undefined as string | undefined, // Placeholder for future image
+    backgroundImage: undefined as string | undefined,
   },
   { 
     name: 'Marcley', 
@@ -82,10 +83,6 @@ const portfolioPreview = [
     backgroundImage: bgSolarPv,
   },
 ];
-
-import { blogPosts } from '@/data/blogPosts';
-
-const blogPreview = blogPosts.slice(0, 3);
 
 export default function Index() {
   const [selectedCompany, setSelectedCompany] = useState<typeof portfolioPreview[0] | null>(null);
@@ -296,74 +293,17 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Blog Preview Section */}
+      {/* News Preview Section */}
       <section className="py-24 lg:py-32 bg-card">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="mb-16">
             <SectionHeading
               eyebrow="Insights"
               title="Latest news"
               description="Perspectives on climate hardware innovation and the energy transition."
             />
-            <Button variant="outline" asChild>
-              <Link to="/blog">
-                View all posts
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {blogPreview.map((post) => {
-              const CardWrapper = post.externalUrl ? 'a' : Link;
-              const cardProps = post.externalUrl 
-                ? { href: post.externalUrl, target: '_blank', rel: 'noopener noreferrer' }
-                : { to: `/blog/${post.slug}` };
-              
-              return (
-                <CardWrapper
-                  key={post.id}
-                  {...cardProps as any}
-                  className="group flex flex-col rounded-2xl border border-border bg-background overflow-hidden hover-lift"
-                >
-                  <div className="aspect-[16/10] bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
-                    {post.image ? (
-                      <img 
-                        src={post.image} 
-                        alt={post.title}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                          <span className="font-display text-xl font-semibold text-primary">
-                            V
-                          </span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex flex-col flex-1 p-6">
-                    <h3 className="font-display text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center gap-4 mt-4 pt-4 border-t border-border text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1.5">
-                        <Calendar className="h-3.5 w-3.5" />
-                        {new Date(post.date).toLocaleDateString('en-GB', { 
-                          day: 'numeric', 
-                          month: 'short', 
-                          year: 'numeric' 
-                        })}
-                      </span>
-                    </div>
-                  </div>
-                </CardWrapper>
-              );
-            })}
-          </div>
+          <NewsGrid showViewAll />
         </div>
       </section>
 
