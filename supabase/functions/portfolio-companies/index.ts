@@ -21,6 +21,31 @@ interface Company {
   backgroundGraphic: string | null;
 }
 
+// Convert Google Drive sharing URLs to direct embeddable URLs
+function convertGoogleDriveUrl(url: string): string {
+  if (!url) return '';
+  
+  // Handle Google Drive file URLs: https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+  const driveFileMatch = url.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (driveFileMatch) {
+    return `https://drive.google.com/uc?export=view&id=${driveFileMatch[1]}`;
+  }
+  
+  // Handle Google Drive open URLs: https://drive.google.com/open?id=FILE_ID
+  const driveOpenMatch = url.match(/drive\.google\.com\/open\?id=([a-zA-Z0-9_-]+)/);
+  if (driveOpenMatch) {
+    return `https://drive.google.com/uc?export=view&id=${driveOpenMatch[1]}`;
+  }
+  
+  // Handle lh3.googleusercontent.com URLs (already direct)
+  if (url.includes('lh3.googleusercontent.com') || url.includes('googleusercontent.com')) {
+    return url;
+  }
+  
+  // Return as-is if it's already a direct URL or other format
+  return url;
+}
+
 function parseCSV(csvText: string): Company[] {
   const lines = csvText.split('\n');
   if (lines.length < 2) return [];
@@ -51,6 +76,9 @@ function parseCSV(csvText: string): Company[] {
     // Only include rows with non-empty Name
     if (!name) continue;
     
+    const rawLogo = (values[logoIdx] || '').trim();
+    const rawBg = (values[bgIdx] || '').trim();
+    
     companies.push({
       name,
       description: (values[descIdx] || '').trim(),
@@ -58,8 +86,8 @@ function parseCSV(csvText: string): Company[] {
       founded: (values[foundedIdx] || '').trim(),
       location: (values[locationIdx] || '').trim(),
       website: (values[websiteIdx] || '').trim(),
-      logo: (values[logoIdx] || '').trim(),
-      backgroundGraphic: (values[bgIdx] || '').trim() || null,
+      logo: convertGoogleDriveUrl(rawLogo),
+      backgroundGraphic: rawBg ? convertGoogleDriveUrl(rawBg) : null,
     });
   }
   
