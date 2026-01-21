@@ -18,7 +18,7 @@ const team = [
   {
     name: 'Alexandra Nilsson',
     role: 'Managing Partner',
-    bio: 'Former leader at Macquarie\'s green investment banking division in Europe, a pioneer in energy transition finance. Set up her own advisory firm, working on several first of a kind transactions such as Ikea\'s first ever offshore wind investment',
+    bio: 'Former leader in Macquarie\'s green investment banking division in Europe, a pioneer in energy transition finance. Developed, structured, and invested in several first-of-a-kind transactions across renewables and the energy transition.',
     linkedin: 'https://www.linkedin.com/in/alexandra-nilsson-a8065339/',
     image: alexandraImg,
   },
