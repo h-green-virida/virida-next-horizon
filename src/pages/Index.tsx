@@ -173,10 +173,12 @@ export default function Index() {
                 
                 {/* Content */}
                 <div className="relative p-6 h-full flex flex-col">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center shrink-0 group-hover:bg-primary/30 transition-colors mb-3">
-                    <area.icon className="h-5 w-5 text-primary" />
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center shrink-0 group-hover:bg-primary/30 transition-colors">
+                      <area.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="font-display text-lg font-semibold text-foreground">{area.title}</h3>
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">{area.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mt-auto">{area.description}</p>
                 </div>
               </div>
