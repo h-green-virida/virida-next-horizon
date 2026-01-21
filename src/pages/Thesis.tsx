@@ -151,7 +151,7 @@ export default function Thesis() {
                       <p className="text-sm font-medium text-accent uppercase tracking-wider mb-4">Focus Areas</p>
                       <ul className="space-y-2">
                         {pillar.examples.map((example, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                          <li key={i} className="text-sm text-foreground font-medium flex items-center gap-2">
                             <span className="w-1 h-1 rounded-full bg-accent" />
                             {example}
                           </li>
