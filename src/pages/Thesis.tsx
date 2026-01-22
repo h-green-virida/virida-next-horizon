@@ -59,7 +59,7 @@ export default function Thesis() {
             <p className="mt-8 text-xl text-muted-foreground leading-relaxed">
               The transition to a net zero economy requires fundamental innovation in physical systems. 
               Software alone cannot decarbonise steel mills, electrify industrial heat, or build the grid of tomorrow. 
-              We invest in the hardware that will.
+              We invest in the hardware that will. Our ideal investment is a clean, modular and decentralized system which we can help scale through our finance expertise.
             </p>
           </div>
         </div>
