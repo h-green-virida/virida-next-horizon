@@ -5,54 +5,89 @@ interface EuropeMapProps {
 }
 
 export function EuropeMap({ className }: EuropeMapProps) {
-  // City positions (approximate positions on simplified Europe map)
+  // City positions based on actual geographic locations on the map
   const cities = [
-    { name: 'London', x: 145, y: 115 },
-    { name: 'Utrecht', x: 175, y: 105 },
-    { name: 'Munich', x: 200, y: 145 },
+    { name: 'London', x: 128, y: 108 },
+    { name: 'Utrecht', x: 152, y: 100 },
+    { name: 'Munich', x: 172, y: 125 },
   ];
 
   return (
     <div className={cn("relative", className)}>
       <svg
-        viewBox="0 0 400 300"
+        viewBox="0 0 300 250"
         className="w-full h-full"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Simplified Europe outline */}
+        {/* Iceland */}
         <path
-          d="M120 60 L140 50 L160 55 L180 45 L200 50 L220 45 L240 55 L260 50 L280 60 L290 75 L285 90 L295 105 L290 120 L300 135 L295 150 L305 165 L300 180 L290 190 L275 185 L260 195 L245 190 L230 200 L215 195 L200 205 L185 200 L170 210 L155 205 L140 215 L125 210 L110 200 L100 185 L95 170 L90 155 L85 140 L90 125 L85 110 L90 95 L100 80 L110 70 Z"
+          d="M45 25 Q55 20 65 25 Q70 30 68 38 Q60 42 50 40 Q42 35 45 25"
           className="fill-secondary/50 stroke-border"
-          strokeWidth="1"
+          strokeWidth="0.5"
         />
         
-        {/* UK/Ireland area */}
+        {/* Norway/Sweden/Finland */}
         <path
-          d="M100 90 L115 85 L130 90 L140 100 L145 115 L140 130 L130 140 L115 145 L100 140 L90 130 L85 115 L90 100 Z"
+          d="M155 5 Q165 8 175 5 Q185 10 190 20 Q188 35 195 50 Q190 65 185 75 Q175 80 165 75 Q155 70 150 60 Q145 45 150 30 Q152 15 155 5"
           className="fill-secondary/50 stroke-border"
-          strokeWidth="1"
+          strokeWidth="0.5"
         />
         
-        {/* Scandinavia simplified */}
+        {/* UK */}
         <path
-          d="M200 20 L215 25 L230 20 L245 30 L255 45 L250 60 L240 70 L225 65 L210 70 L200 60 L195 45 L200 30 Z"
+          d="M110 85 Q115 80 125 82 Q135 85 140 95 Q142 105 138 115 Q130 125 120 128 Q110 125 105 115 Q100 105 105 95 Q108 88 110 85"
           className="fill-secondary/50 stroke-border"
-          strokeWidth="1"
+          strokeWidth="0.5"
         />
         
-        {/* Iberian Peninsula */}
+        {/* Ireland */}
         <path
-          d="M80 180 L100 175 L120 180 L130 195 L125 210 L110 220 L90 225 L75 215 L70 200 L75 185 Z"
+          d="M90 95 Q98 90 105 95 Q108 102 105 110 Q98 115 90 112 Q85 105 90 95"
           className="fill-secondary/50 stroke-border"
-          strokeWidth="1"
+          strokeWidth="0.5"
+        />
+        
+        {/* France */}
+        <path
+          d="M115 130 Q130 125 145 130 Q155 140 150 155 Q140 170 125 175 Q110 170 105 155 Q108 140 115 130"
+          className="fill-secondary/50 stroke-border"
+          strokeWidth="0.5"
+        />
+        
+        {/* Spain/Portugal */}
+        <path
+          d="M85 165 Q100 160 120 165 Q130 175 128 190 Q120 205 100 210 Q80 205 75 190 Q78 175 85 165"
+          className="fill-secondary/50 stroke-border"
+          strokeWidth="0.5"
+        />
+        
+        {/* Germany/Benelux/Poland */}
+        <path
+          d="M145 90 Q160 85 180 90 Q195 100 195 115 Q190 130 175 135 Q155 132 145 120 Q140 105 145 90"
+          className="fill-secondary/50 stroke-border"
+          strokeWidth="0.5"
         />
         
         {/* Italy */}
         <path
-          d="M200 170 L210 175 L220 190 L225 210 L220 225 L210 235 L200 230 L195 215 L190 195 L195 180 Z"
+          d="M160 145 Q170 140 175 150 Q180 165 175 185 Q165 200 155 195 Q150 180 152 165 Q155 152 160 145"
           className="fill-secondary/50 stroke-border"
-          strokeWidth="1"
+          strokeWidth="0.5"
+        />
+        
+        {/* Eastern Europe */}
+        <path
+          d="M195 75 Q215 70 235 80 Q250 95 250 120 Q245 145 230 155 Q210 160 195 150 Q185 135 190 115 Q192 90 195 75"
+          className="fill-secondary/50 stroke-border"
+          strokeWidth="0.5"
+        />
+        
+        {/* Greece/Balkans */}
+        <path
+          d="M195 155 Q210 150 220 160 Q225 175 218 190 Q205 200 192 195 Q185 180 190 165 Q192 158 195 155"
+          className="fill-secondary/50 stroke-border"
+          strokeWidth="0.5"
         />
 
         {/* City markers */}
@@ -62,23 +97,23 @@ export function EuropeMap({ className }: EuropeMapProps) {
             <circle
               cx={city.x}
               cy={city.y}
-              r="12"
-              className="fill-primary/10 animate-pulse"
+              r="8"
+              className="fill-primary/20"
             />
             {/* Inner marker */}
             <circle
               cx={city.x}
               cy={city.y}
-              r="6"
+              r="4"
               className="fill-primary stroke-background"
-              strokeWidth="2"
+              strokeWidth="1.5"
             />
             {/* City label */}
             <text
               x={city.x}
-              y={city.y + 22}
+              y={city.y + 14}
               textAnchor="middle"
-              className="fill-foreground text-[10px] font-medium"
+              className="fill-foreground text-[8px] font-medium"
             >
               {city.name}
             </text>
