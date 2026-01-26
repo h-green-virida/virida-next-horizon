@@ -60,7 +60,7 @@ Our ideal investment is a clean, modular and decentralized system which we can h
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <SectionHeading eyebrow="Our Approach" title="How we partner" centered />
-            <div className="mt-12 grid sm:grid-cols-3 gap-8">
+            <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[{
               title: 'Seed to Series A',
               description: 'We lead or co-lead rounds of €1-8M, with meaningful reserves for follow-on.'
@@ -70,6 +70,9 @@ Our ideal investment is a clean, modular and decentralized system which we can h
             }, {
               title: 'Network Effects',
               description: 'We connect portfolio companies to industry partners, customers, and talent across Europe.'
+            }, {
+              title: 'Non-dilutive financing',
+              description: 'We actively support our capital-intensive portfolio companies with the structuring and access of non-dilutive financing.'
             }].map((item, index) => <div key={index} className="p-6 rounded-xl bg-background border border-border">
                   <h4 className="font-display text-lg font-semibold text-foreground mb-2">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
