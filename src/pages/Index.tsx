@@ -161,7 +161,7 @@ export default function Index() {
                 
                 {/* Content */}
                 <div className="relative p-6 h-full flex flex-col">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 min-h-[56px]">
                     <div className="w-10 h-10 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center shrink-0 group-hover:bg-primary/30 transition-colors">
                       <area.icon className="h-5 w-5 text-primary" />
                     </div>
