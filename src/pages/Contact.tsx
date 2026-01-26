@@ -1,4 +1,5 @@
 import { Layout } from '@/components/layout/Layout';
+import { EuropeMap } from '@/components/shared/EuropeMap';
 import { Mail, MapPin } from 'lucide-react';
 
 export default function Contact() {
@@ -22,7 +23,7 @@ export default function Contact() {
       {/* Contact Content */}
       <section className="py-8 pb-24 lg:pb-32">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
               <div className="p-8 rounded-2xl bg-card border border-border">
                 <div className="flex items-start gap-4">
@@ -54,6 +55,10 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="flex justify-center lg:justify-end">
+              <EuropeMap className="w-full max-w-md h-auto" />
             </div>
           </div>
         </div>
