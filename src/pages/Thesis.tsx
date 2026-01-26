@@ -55,41 +55,25 @@ Our ideal investment is a clean, modular and decentralized system which we can h
         </div>
       </section>
 
-      {/* Why Now */}
+      {/* Our Approach */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <SectionHeading eyebrow="Market Context" title="Why now" />
-              <div className="mt-8 space-y-6 text-muted-foreground">
-                <p className="leading-relaxed">
-                  Three converging forces have created an unprecedented opportunity for climate hardware innovation:
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-medium">1</span>
-                    <span><strong className="text-foreground">Policy acceleration</strong> — The IRA, EU Green Deal, and equivalent legislation globally have created massive demand signals and de-risked early-stage climate technology.</span>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-medium">2</span>
-                    <span><strong className="text-foreground">Technology maturation</strong> — Key enabling technologies (batteries, power electronics, advanced materials) have reached inflection points in cost and performance.</span>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-medium">3</span>
-                    <span><strong className="text-foreground">Industrial urgency</strong> — Major industrials are actively seeking solutions to meet decarbonisation commitments, creating unprecedented customer pull.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/5 to-accent/10 border border-border overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <p className="font-display text-6xl md:text-7xl font-bold text-gradient">€1.5T</p>
-                    <p className="mt-4 text-muted-foreground">Annual investment needed in clean energy by 2030</p>
-                  </div>
-                </div>
-              </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionHeading eyebrow="Our Approach" title="How we partner" centered />
+            <div className="mt-12 grid sm:grid-cols-3 gap-8">
+              {[{
+              title: 'Seed to Series A',
+              description: 'We lead or co-lead rounds of €1-8M, with meaningful reserves for follow-on.'
+            }, {
+              title: 'Active Builders',
+              description: 'We work hands-on with founders on technical validation, team building, and go-to-market.'
+            }, {
+              title: 'Network Effects',
+              description: 'We connect portfolio companies to industry partners, customers, and talent across Europe.'
+            }].map((item, index) => <div key={index} className="p-6 rounded-xl bg-background border border-border">
+                  <h4 className="font-display text-lg font-semibold text-foreground mb-2">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>)}
             </div>
           </div>
         </div>
@@ -137,28 +121,5 @@ Our ideal investment is a clean, modular and decentralized system which we can h
         </div>
       </section>
 
-      {/* Our Approach */}
-      <section className="py-24 lg:py-32 bg-card">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionHeading eyebrow="Our Approach" title="How we partner" centered />
-            <div className="mt-12 grid sm:grid-cols-3 gap-8">
-              {[{
-              title: 'Seed to Series A',
-              description: 'We lead or co-lead rounds of €1-8M, with meaningful reserves for follow-on.'
-            }, {
-              title: 'Active Builders',
-              description: 'We work hands-on with founders on technical validation, team building, and go-to-market.'
-            }, {
-              title: 'Network Effects',
-              description: 'We connect portfolio companies to industry partners, customers, and talent across Europe.'
-            }].map((item, index) => <div key={index} className="p-6 rounded-xl bg-background border border-border">
-                  <h4 className="font-display text-lg font-semibold text-foreground mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>)}
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>;
 }
