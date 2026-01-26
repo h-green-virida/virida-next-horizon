@@ -108,12 +108,12 @@ export default function Index() {
               eyebrow="About Virida"
               title="Catalysing the energy transition through hardware energy tech investment"
             />
-            <p className="mt-6 text-muted-foreground leading-relaxed">
+            <p className="mt-6 text-muted-foreground leading-relaxed max-w-2xl">
               Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
               accelerating the energy transition. We partner with exceptional founders building the physical 
               infrastructure required for a decarbonised world.
             </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
+            <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
               Our team combines deep expertise in energy systems, industrial technology, and venture capital 
               to support founders from first prototype to commercial scale.
             </p>
