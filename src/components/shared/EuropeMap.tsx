@@ -11,9 +11,9 @@ export function EuropeMap({ className }: EuropeMapProps) {
   // Utrecht: central Netherlands (just east of UK, near coast)
   // Munich: southern Germany/Bavaria (central Europe, south of Germany)
   const cities = [
-    { name: 'London', left: '17%', top: '44%' },
-    { name: 'Utrecht', left: '30.5%', top: '40%' },
-    { name: 'Munich', left: '36.5%', top: '52%' },
+     { name: 'London', left: '17%', top: '48%' },
+     { name: 'Utrecht', left: '30.5%', top: '44%' },
+     { name: 'Munich', left: '36.5%', top: '56%' },
   ];
 
   return (
