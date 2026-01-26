@@ -89,9 +89,8 @@ Our ideal investment is a clean, modular and decentralized system which we can h
 
       <section className="py-16 lg:py-24 bg-card">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionHeading eyebrow="Our Approach" title="How we partner" centered />
-            <div className="mt-12 grid sm:grid-cols-3 gap-8">
+          <SectionHeading eyebrow="Our Approach" title="How we partner" centered className="mx-auto" />
+          <div className="mt-12 grid sm:grid-cols-3 gap-8">
               {[{
               title: 'Seed to Series A',
               description: 'We lead or co-lead rounds of €1-8M, with meaningful reserves for follow-on.'
@@ -105,8 +104,7 @@ Our ideal investment is a clean, modular and decentralized system which we can h
                   <h3 className="font-display text-xl font-semibold text-foreground mb-4">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>)}
-            </div>
-          </div>
+        </div>
         </div>
       </section>
 
