@@ -41,11 +41,6 @@ export default function Portfolio() {
               We partner with exceptional teams tackling the hardest problems in energy and industrial systems. 
               These are the companies we're proud to back.
             </p>
-            {!isLoading && !error && (
-              <p className="mt-4 text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">{companyCount}</span> {companyCount === 1 ? 'company' : 'companies'}
-              </p>
-            )}
           </div>
         </div>
       </section>
