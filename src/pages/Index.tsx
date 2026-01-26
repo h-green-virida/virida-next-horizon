@@ -103,26 +103,33 @@ export default function Index() {
       {/* About Section */}
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <SectionHeading
-              eyebrow="About Virida"
-              title="Catalysing the energy transition through hardware energy tech investment"
-            />
-            <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">
-              Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
-              accelerating the energy transition. We partner with exceptional founders building the physical 
-              infrastructure required for a decarbonised world.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed max-w-xl">
-              Our team combines deep expertise in energy systems, industrial technology, and venture capital 
-              to support founders from first prototype to commercial scale.
-            </p>
-            <Button variant="minimal" className="mt-8" asChild>
-              <Link to="/team">
-                Meet our team
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="max-w-xl">
+              <SectionHeading
+                eyebrow="About Virida"
+                title="Catalysing the energy transition through hardware energy tech investment"
+              />
+              <p className="mt-6 text-muted-foreground leading-relaxed">
+                Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
+                accelerating the energy transition. We partner with exceptional founders building the physical 
+                infrastructure required for a decarbonised world.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                Our team combines deep expertise in energy systems, industrial technology, and venture capital 
+                to support founders from first prototype to commercial scale.
+              </p>
+              <Button variant="minimal" className="mt-8" asChild>
+                <Link to="/team">
+                  Meet our team
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="flex items-center lg:justify-end">
+              <p className="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-foreground leading-snug max-w-md">
+                We invest in <strong className="font-semibold">energy hardware</strong> companies across <strong className="font-semibold">Europe</strong>, from <strong className="font-semibold">Seed to Series A</strong>, writing <strong className="font-semibold">€1–8M</strong> tickets.
+              </p>
+            </div>
           </div>
         </div>
       </section>
