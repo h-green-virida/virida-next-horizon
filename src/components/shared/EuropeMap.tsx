@@ -7,13 +7,13 @@ interface EuropeMapProps {
 
 export function EuropeMap({ className }: EuropeMapProps) {
   // City positions calibrated to the uploaded map
-  // London: southeastern England
-  // Utrecht: central Netherlands
-  // Munich: southern Germany (Bavaria)
+  // London: southeastern England (UK island, lower right area)
+  // Utrecht: central Netherlands (just east of UK, near coast)
+  // Munich: southern Germany/Bavaria (central Europe, south of Germany)
   const cities = [
-    { name: 'London', left: '18.5%', top: '43%' },
-    { name: 'Utrecht', left: '32%', top: '39%' },
-    { name: 'Munich', left: '38%', top: '53%' },
+    { name: 'London', left: '17%', top: '44%' },
+    { name: 'Utrecht', left: '30.5%', top: '40%' },
+    { name: 'Munich', left: '36.5%', top: '52%' },
   ];
 
   return (
