@@ -98,7 +98,7 @@ Our ideal investment is a clean, modular and decentralized system which we can h
               title: 'Active Builders',
               description: 'We work hands-on with founders on technical validation, team building, and go-to-market.'
             }, {
-              title: 'Non-dilutive financing',
+              title: 'Non-Dilutive Financing',
               description: 'We actively support our capital-intensive portfolio companies with the structuring and access of non-dilutive financing.'
             }].map((item, index) => <div key={index} className="p-8 rounded-2xl bg-background border border-border">
                   <h3 className="font-display text-xl font-semibold text-foreground mb-4">{item.title}</h3>
