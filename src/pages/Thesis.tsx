@@ -70,8 +70,8 @@ Our ideal investment is a clean, modular and decentralized system which we can h
             }, {
               title: 'Non-dilutive financing',
               description: 'We actively support our capital-intensive portfolio companies with the structuring and access of non-dilutive financing.'
-            }].map((item, index) => <div key={index} className="p-6 rounded-xl bg-background border border-border flex flex-col h-full">
-                  <h4 className="font-display text-lg font-semibold text-foreground min-h-[3.5rem] flex items-start">{item.title}</h4>
+            }].map((item, index) => <div key={index} className="p-6 rounded-xl bg-background border border-border flex flex-col h-full text-center">
+                  <h4 className="font-display text-lg font-semibold text-foreground min-h-[3.5rem] flex items-center justify-center">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>)}
             </div>
