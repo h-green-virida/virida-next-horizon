@@ -1,5 +1,4 @@
 import { Layout } from '@/components/layout/Layout';
-import { EuropeMap } from '@/components/shared/EuropeMap';
 import { Mail, MapPin } from 'lucide-react';
 
 export default function Contact() {
@@ -23,42 +22,36 @@ export default function Contact() {
       {/* Contact Content */}
       <section className="py-8 pb-24 lg:pb-32">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-8">
-              <div className="p-8 rounded-2xl bg-card border border-border">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-semibold text-foreground">Email us</h3>
-                    <p className="text-muted-foreground mt-1">For general enquiries and founder introductions</p>
-                    <a href="mailto:info@virida-capital.com" className="text-accent hover:underline mt-2 inline-block">
-                      info@virida-capital.com
-                    </a>
-                  </div>
+          <div className="max-w-2xl mx-auto space-y-8">
+            <div className="p-8 rounded-2xl bg-card border border-border">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Mail className="h-5 w-5 text-primary" />
                 </div>
-              </div>
-
-              <div className="p-8 rounded-2xl bg-card border border-border">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-semibold text-foreground">Headquarters</h3>
-                    <p className="text-muted-foreground mt-1">
-                      Nieuwegracht aan de Werf 18<br />
-                      3512 LR Utrecht<br />
-                      The Netherlands
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-display text-lg font-semibold text-foreground">Email us</h3>
+                  <p className="text-muted-foreground mt-1">For general enquiries and founder introductions</p>
+                  <a href="mailto:info@virida-capital.com" className="text-accent hover:underline mt-2 inline-block">
+                    info@virida-capital.com
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="flex justify-center lg:justify-end">
-              <EuropeMap className="w-full max-w-md h-auto" />
+            <div className="p-8 rounded-2xl bg-card border border-border">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <MapPin className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-semibold text-foreground">Headquarters</h3>
+                  <p className="text-muted-foreground mt-1">
+                    Nieuwegracht aan de Werf 18<br />
+                    3512 LR Utrecht<br />
+                    The Netherlands
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
