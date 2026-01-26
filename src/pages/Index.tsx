@@ -103,10 +103,11 @@ export default function Index() {
       {/* About Section */}
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <SectionHeading
               eyebrow="About Virida"
               title="Catalysing the energy transition through hardware energy tech investment"
+              centered
             />
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
