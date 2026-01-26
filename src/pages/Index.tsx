@@ -104,7 +104,7 @@ export default function Index() {
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="max-w-xl">
+            <div className="max-w-2xl">
               <SectionHeading
                 eyebrow="About Virida"
                 title="Catalysing the energy transition through hardware energy tech investment"
