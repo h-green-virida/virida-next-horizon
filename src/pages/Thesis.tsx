@@ -55,7 +55,38 @@ Our ideal investment is a clean, modular and decentralized system which we can h
         </div>
       </section>
 
-      {/* Our Approach */}
+      {/* How We Work Section */}
+      <section className="py-24 lg:py-32 bg-[hsl(270,50%,97%)] dark:bg-[hsl(270,30%,12%)]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Our Values"
+            title="How we work"
+            centered
+          />
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {[
+              {
+                title: 'Technical Depth',
+                description: 'We evaluate technologies from first principles. Our team has built and scaled hardware companies, and we bring that operational lens to every investment.',
+              },
+              {
+                title: 'Founder Partnership',
+                description: 'We work alongside founders, not just as investors, but as collaborators who understand the unique challenges of building physical products.',
+              },
+              {
+                title: 'Long-Term Thinking',
+                description: "Hardware takes time. We're structured to support companies through the multi-year journey from prototype to commercial scale.",
+              },
+            ].map((value, index) => (
+              <div key={index} className="p-8 rounded-2xl bg-background border border-border">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-4">{value.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 lg:py-24 bg-card">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">

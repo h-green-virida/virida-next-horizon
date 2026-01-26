@@ -97,38 +97,6 @@ export default function Team() {
           </div>
         </div>
       </section>
-
-      {/* Values Section */}
-      <section className="py-24 lg:py-32 bg-card">
-        <div className="container mx-auto px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Our Values"
-            title="How we work"
-            centered
-          />
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {[
-              {
-                title: 'Technical Depth',
-                description: 'We evaluate technologies from first principles. Our team has built and scaled hardware companies, and we bring that operational lens to every investment.',
-              },
-              {
-                title: 'Founder Partnership',
-                description: 'We work alongside founders, not just as investors, but as collaborators who understand the unique challenges of building physical products.',
-              },
-              {
-                title: 'Long-Term Thinking',
-                description: "Hardware takes time. We're structured to support companies through the multi-year journey from prototype to commercial scale.",
-              },
-            ].map((value, index) => (
-              <div key={index} className="p-8 rounded-2xl bg-background border border-border">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-4">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 }
