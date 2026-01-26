@@ -1,16 +1,19 @@
 import { cn } from '@/lib/utils';
-import europeMap from '@/assets/europe-map.png';
+import europeMap from '@/assets/europe-map.webp';
 
 interface EuropeMapProps {
   className?: string;
 }
 
 export function EuropeMap({ className }: EuropeMapProps) {
-  // City positions as percentages relative to the map image
+  // City positions calibrated to the uploaded map
+  // London: southeastern England
+  // Utrecht: central Netherlands
+  // Munich: southern Germany (Bavaria)
   const cities = [
-    { name: 'London', left: '24%', top: '38%' },
-    { name: 'Utrecht', left: '36%', top: '34%' },
-    { name: 'Munich', left: '44%', top: '48%' },
+    { name: 'London', left: '18.5%', top: '43%' },
+    { name: 'Utrecht', left: '32%', top: '39%' },
+    { name: 'Munich', left: '38%', top: '53%' },
   ];
 
   return (
@@ -18,7 +21,7 @@ export function EuropeMap({ className }: EuropeMapProps) {
       <img 
         src={europeMap} 
         alt="Map of Europe" 
-        className="w-full h-auto opacity-80 dark:invert dark:opacity-60"
+        className="w-full h-auto dark:invert dark:opacity-70"
       />
       
       {/* City markers */}
@@ -29,13 +32,13 @@ export function EuropeMap({ className }: EuropeMapProps) {
           style={{ left: city.left, top: city.top, transform: 'translate(-50%, -50%)' }}
         >
           {/* Outer glow */}
-          <div className="absolute w-8 h-8 rounded-full bg-primary/20 animate-pulse" />
+          <div className="absolute w-6 h-6 rounded-full bg-primary/20" />
           {/* Middle ring */}
-          <div className="absolute w-5 h-5 rounded-full bg-primary/40" />
+          <div className="absolute w-4 h-4 rounded-full bg-primary/40" />
           {/* Inner marker */}
-          <div className="relative w-3 h-3 rounded-full bg-primary border-2 border-background shadow-lg" />
+          <div className="relative w-2.5 h-2.5 rounded-full bg-primary border-2 border-background shadow-lg" />
           {/* City label */}
-          <span className="mt-3 text-xs font-medium text-foreground whitespace-nowrap">
+          <span className="mt-2 text-[10px] font-medium text-foreground whitespace-nowrap">
             {city.name}
           </span>
         </div>
