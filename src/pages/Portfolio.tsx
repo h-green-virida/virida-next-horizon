@@ -110,9 +110,9 @@ export default function Portfolio() {
                   </div>
                   
                   {/* Content */}
-                  <div className="relative p-8">
+                  <div className="relative p-8 flex flex-col h-full min-h-[320px]">
                     <div className={cn(
-                      "w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-colors overflow-hidden",
+                      "w-16 h-16 rounded-xl flex items-center justify-center transition-colors overflow-hidden flex-shrink-0",
                       isImageUrl(company.logo)
                         ? "bg-white"
                         : "bg-secondary group-hover:bg-primary/10"
@@ -125,12 +125,14 @@ export default function Portfolio() {
                         </span>
                       )}
                     </div>
-                    {company.sector && (
-                      <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
-                        {company.sector}
-                      </span>
-                    )}
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-2">{company.name}</h3>
+                    <div className="h-6 mt-6 flex-shrink-0">
+                      {company.sector && (
+                        <span className="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
+                          {company.sector}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-foreground mb-2 mt-4 flex-shrink-0">{company.name}</h3>
                     <p className="text-sm text-muted-foreground">{company.description}</p>
                   </div>
                 </button>
