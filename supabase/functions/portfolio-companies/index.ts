@@ -8,7 +8,7 @@ const corsHeaders = {
 
 // In-memory cache
 let cache: { data: Company[] | null; timestamp: number } = { data: null, timestamp: 0 };
-const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
+const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
 
 interface Company {
   name: string;
