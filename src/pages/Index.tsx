@@ -126,7 +126,7 @@ export default function Index() {
               </Button>
             </div>
             <div className="flex items-center lg:justify-end">
-              <p className="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-foreground leading-snug max-w-lg">
+              <p className="font-display text-xl md:text-2xl lg:text-3xl font-normal text-foreground leading-snug max-w-lg">
                 We invest in <strong className="font-semibold">energy hardware</strong> companies across <strong className="font-semibold">Europe</strong>, from <strong className="font-semibold">Seed to Series A</strong>, writing <strong className="font-semibold">€1–8M</strong> tickets.
               </p>
             </div>
