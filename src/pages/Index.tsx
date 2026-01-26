@@ -103,45 +103,26 @@ export default function Index() {
       {/* About Section */}
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <SectionHeading
-                eyebrow="About Virida"
-                title="Catalysing the energy transition through hardware energy tech investment"
-              />
-              <p className="mt-6 text-muted-foreground leading-relaxed">
-                Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
-                accelerating the energy transition. We partner with exceptional founders building the physical 
-                infrastructure required for a decarbonised world.
-              </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                Our team combines deep expertise in energy systems, industrial technology, and venture capital 
-                to support founders from first prototype to commercial scale.
-              </p>
-              <Button variant="minimal" className="mt-8" asChild>
-                <Link to="/team">
-                  Meet our team
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-card to-secondary border border-border p-8 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-4 w-full">
-                  {[
-                    { value: 'Energy', label: 'Sector' },
-                    { value: 'Europe', label: 'Geography' },
-                    { value: 'Seed to Series A', label: 'Stage' },
-                    { value: '€1-8M', label: 'Ticket Size' },
-                  ].map((stat, index) => (
-                    <div key={index} className="text-center p-6 rounded-xl bg-primary/10 border border-primary/20 backdrop-blur">
-                      <p className="font-display text-xl font-semibold text-primary">{stat.value}</p>
-                      <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="max-w-3xl">
+            <SectionHeading
+              eyebrow="About Virida"
+              title="Catalysing the energy transition through hardware energy tech investment"
+            />
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              Virida Capital is a European venture fund focused exclusively on early-stage hardware companies 
+              accelerating the energy transition. We partner with exceptional founders building the physical 
+              infrastructure required for a decarbonised world.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Our team combines deep expertise in energy systems, industrial technology, and venture capital 
+              to support founders from first prototype to commercial scale.
+            </p>
+            <Button variant="minimal" className="mt-8" asChild>
+              <Link to="/team">
+                Meet our team
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
