@@ -1,13 +1,20 @@
 import { cn } from '@/lib/utils';
+import { MapPin } from 'lucide-react';
 
 interface EuropeMapProps {
   className?: string;
 }
 
 export function EuropeMap({ className }: EuropeMapProps) {
-  // Using Google Maps embed centered on Western Europe to show London, Utrecht, and Munich
-  // Center point approximately between the three cities: lat 50.5, lng 5.0, zoom level 5
+  // Google Maps embed centered on Western Europe
   const embedUrl = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5000000!2d5.0!3d50.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snl!4v1706000000000!5m2!1sen!2snl";
+
+  // City marker positions (percentages relative to the map container)
+  const cities = [
+    { name: 'London', left: '38%', top: '38%' },
+    { name: 'Utrecht', left: '48%', top: '36%' },
+    { name: 'Munich', left: '54%', top: '48%' },
+  ];
 
   return (
     <div className={cn("relative rounded-2xl overflow-hidden border border-border bg-card", className)}>
@@ -23,21 +30,19 @@ export function EuropeMap({ className }: EuropeMapProps) {
         className="w-full"
       />
       
-      {/* Legend overlay */}
-      <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-3">
-        <div className="flex items-center gap-2 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium">
-          <span className="w-2 h-2 rounded-full bg-primary"></span>
-          London
+      {/* City pin markers */}
+      {cities.map((city) => (
+        <div
+          key={city.name}
+          className="absolute flex flex-col items-center transform -translate-x-1/2 -translate-y-full pointer-events-none"
+          style={{ left: city.left, top: city.top }}
+        >
+          <div className="bg-primary text-primary-foreground text-xs font-medium px-2 py-0.5 rounded-full mb-1 whitespace-nowrap shadow-md">
+            {city.name}
+          </div>
+          <MapPin className="w-6 h-6 text-primary drop-shadow-lg" fill="currentColor" />
         </div>
-        <div className="flex items-center gap-2 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium">
-          <span className="w-2 h-2 rounded-full bg-primary"></span>
-          Utrecht
-        </div>
-        <div className="flex items-center gap-2 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium">
-          <span className="w-2 h-2 rounded-full bg-primary"></span>
-          Munich
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
