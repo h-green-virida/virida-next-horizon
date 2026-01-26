@@ -168,7 +168,7 @@ export default function Index() {
                     <h3 className="font-display text-lg font-semibold text-foreground leading-tight">{area.title}</h3>
                   </div>
                   <div className="flex-1" />
-                  <p className="text-sm text-muted-foreground leading-relaxed min-h-[72px]">{area.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed h-[92px] overflow-hidden">{area.description}</p>
                 </div>
               </div>
             ))}
