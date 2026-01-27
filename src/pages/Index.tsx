@@ -74,7 +74,7 @@ export default function Index() {
               The Future of Physical
             </p>
             <h1 className="animate-fade-up font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground tracking-tight leading-tight">
-              Investing in the new infrastructure of a{' '}
+              Investing in the critical hardware of a{' '}
               <span className="text-gradient">net zero world</span>
             </h1>
             <p className="animate-fade-up-delayed text-lg md:text-xl text-muted-foreground mt-8 max-w-2xl mx-auto leading-relaxed">
