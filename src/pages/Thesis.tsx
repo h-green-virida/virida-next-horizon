@@ -9,8 +9,8 @@ import sectorFoundations from '@/assets/sector-foundations.png';
 const pillars = [{
   icon: Zap,
   title: 'Electrons',
-  description: 'Technologies that generate, transmit, store, and intelligently manage electricity across the energy system. From advanced solar and wind to next-generation grid infrastructure, we back founders building the backbone of electrified economies.',
-  examples: ['Advanced renewable generation', 'Heating and cooling', 'Energy management systems'],
+  description: 'Technologies that generate, convert, transmit, and intelligently manage electricity across the energy system. From advanced solar and wind to next-generation grid infrastructure, we back founders building the backbone of electrified economies.',
+  examples: ['Advanced renewable generation', 'Next-gen distribution infrastructure', 'Energy management systems'],
   backgroundImage: sectorElectrons
 }, {
   icon: Atom,
@@ -34,7 +34,7 @@ const pillars = [{
   icon: Settings,
   title: 'Foundations & Efficiencies',
   description: 'Core technologies that improve manufacturing, asset optimisation, and energy efficiency across the industrial value chain. Efficiency remains the cheapest form of clean energy.',
-  examples: ['Hardware-enabled sensors and monitoring', 'Advanced materials', 'Energy-efficient manufacturing'],
+  examples: ['Hardware-enabled sensing and intelligence', 'Advanced materials', 'Energy-efficient industrial processes'],
   backgroundImage: sectorFoundations
 }];
 export default function Thesis() {
