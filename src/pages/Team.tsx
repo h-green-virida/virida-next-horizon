@@ -4,7 +4,6 @@ import { Linkedin } from 'lucide-react';
 import nielsImg from '@/assets/team-niels.png';
 import alexandraImg from '@/assets/team-alexandra.png';
 import harleyImg from '@/assets/team-harley.png';
-import annikaImg from '@/assets/team-annika.png';
 import joppeImg from '@/assets/team-joppe.png';
 
 const team = [
@@ -28,13 +27,6 @@ const team = [
     bio: 'Senior employee at two early-stage VC funds covering climate tech, sourcing and leading several investments into now category leading businesses. Sat on multiple company boards, LP in several emerging VC funds, and active angel investor.',
     linkedin: 'https://www.linkedin.com/in/harleycgreen/',
     image: harleyImg,
-  },
-  {
-    name: 'Annika Berghauser',
-    role: 'Investment Manager',
-    bio: 'Extensive clean energy investment advisory experience covering Europe, the US, and Japan. Previously worked at KfW-IPEX, and the International Energy Agency.',
-    linkedin: 'https://www.linkedin.com/in/annika-bergh%C3%A4user-247a4263/',
-    image: annikaImg,
   },
   {
     name: 'Joppe Eising',
