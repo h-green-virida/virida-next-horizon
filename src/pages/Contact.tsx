@@ -46,8 +46,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-display text-lg font-semibold text-foreground">Headquarters</h3>
                   <p className="text-muted-foreground mt-1">
-                    Nieuwegracht aan de Werf 18<br />
-                    3512 LR Utrecht<br />
+                    Prinsengracht 769<br />
+                    1017 JZ Amsterdam<br />
                     The Netherlands
                   </p>
                 </div>

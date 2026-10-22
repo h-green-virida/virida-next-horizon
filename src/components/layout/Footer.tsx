@@ -60,7 +60,7 @@ export function Footer() {
             © {new Date().getFullYear()} Virida Capital. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Amsterdam · Berlin · London
+            Amsterdam · London · Munich
           </p>
         </div>
       </div>
