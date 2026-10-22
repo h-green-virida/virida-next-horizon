@@ -92,8 +92,8 @@ Our ideal investment is a clean, modular and decentralized system which we can h
           <SectionHeading eyebrow="Our Approach" title="How we partner" centered className="mx-auto" />
           <div className="mt-12 grid sm:grid-cols-3 gap-8">
               {[{
-              title: 'Seed to Series A',
-              description: 'We lead or co-lead rounds of €1-8M, with meaningful reserves for follow-on.'
+              title: 'Seed + / -',
+              description: 'We lead or co-lead pre-seed to series Arounds with tickets of €500k-€5M, with meaningful reserves for follow-on.'
             }, {
               title: 'Active Builders',
               description: 'We work hands-on with founders on technical validation, team building, and go-to-market.'
