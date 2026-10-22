@@ -28,13 +28,6 @@ const team = [
     linkedin: 'https://www.linkedin.com/in/harleycgreen/',
     image: harleyImg,
   },
-  {
-    name: 'Joppe Eising',
-    role: 'Analyst',
-    bio: 'Formerly at Impulse, a financial advisory firm for impact tech startups in energy and health.',
-    linkedin: 'https://www.linkedin.com/in/joppe-eising/',
-    image: joppeImg,
-  },
 ];
 
 export default function Team() {
